@@ -1,0 +1,62 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="query()">查询</button>
+      <button type="button" class="btn btn-default" ng-click="export()">导出</button>
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="date" title="起始时间" idname="startDate" ng-model="filter.startDate" err-msg="请按照指定格式输入时间。例如:2016-01-01"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="date" title="截止时间" idname="endDate" ng-model="filter.endDate"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="text" title="意向车型" idname="intention" ng-model="filter.intention"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="text" title="来源平台" idname="activity" ng-model="filter.activity"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="来源店铺" idname="activityType" ng-model="filter.activityType" source-data="codeMaster.activityType"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="区域" idname="area" ng-model="filter.area" source-data="codeMaster.area"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="省份" idname="province" ng-model="filter.province" source-data="codeMaster.province"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="城市" idname="city" ng-model="filter.city" source-data="codeMaster.city"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="4S店" idname="store" ng-model="filter.store" source-data="codeMaster.store"></input-combo>
+      </div>
+    </div>
+  </form>
+  <div class="mb-grid">
+    <div class="div-grid-lg">
+      <table class="table table-bordered table-condensed table-striped table-has-header">
+        <tr>
+          <th></th>
+          <th>省份</th>
+          <th>城市</th>
+          <th>4S店</th>
+          <th>48小时反馈数量</th>
+          <th>48小时反馈及时率（%）</th>
+        </tr>
+        <tr ng-repeat="row in grid.rows track by $index" ng-class="{'info':row.selected}" ng-click="selectRow($index)" ng-dblclick="ok()">
+          <td>{{row.no}}</td>
+          <td>{{row.province}}</td>
+          <td>{{row.city}}</td>
+          <td>{{row.storeNm}}</td>
+          <td>{{row.trackFeedbackRateNm}}</td>
+          <td>{{row.trackFeedbackRate}}</td>
+        </tr>
+      </table>
+    </div>
+    <mb-pager></mb-pager>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="searchBtnEvent()" ng-disabled="form.$invalid">查询</button>
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="date" title="开始时间" idname="beginTime" ng-required="true" ng-model="filter.beginTime" err-msg="请按照指定格式输入时间。例如:2016-01-01 12:00:00" output-format="'yyyy-MM-dd HH:mm:ss'"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="date" title="结束时间" idname="endTime" ng-required="true" ng-model="filter.endTime" err-msg="请按照指定格式输入时间。例如:2016-01-01 12:00:00" output-format="'yyyy-MM-dd HH:mm:ss'"></input-combo>
+      </div>
+    </div>
+    <div yj-echart="chartOptions" style="width:100%;height:500px;"></div>
+  </form>
+</div>

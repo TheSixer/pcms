@@ -1,0 +1,37 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="searchBtnEvent()">查询</button>
+      <button type="button" class="btn btn-default" ng-click="allotBtnEvent()">分配</button>
+      <button type="button" class="btn btn-default" ng-click="autoAllotBtnEvent()">自动分配</button>
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="text" title="机会编号" idname="chanceId" ng-model="filter.chanceId" ng-trim="true"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="机会状态" idname="status" ng-model="filter.chanceStatus" source-data="codeMaster.chanceStatus"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="业务类别" idname="businessType" ng-model="filter.businessType" source-data="codeMaster.businessType"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="机会级别" idname="chanceLevel" ng-model="filter.chanceLevel" source-data="codeMaster.clueLevel"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="text" title="客户姓名" idname="customerName" ng-model="filter.customerName" ng-trim="true"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="text" title="手机" idname="phone" ng-model="filter.phone" ng-trim="true"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="text" title="目标车型" idname="intentionModel" ng-model="filter.intentionModel" ng-trim="true"></input-combo>
+      </div>
+    </div>
+  </form>
+  <div id="mainGrid" ui-grid="hybridObj.gridOptions" class="gridCommon gridRow10" ui-grid-selection
+       ui-grid-resize-columns ui-grid-pagination ui-grid-auto-resize>
+  </div>
+</div>

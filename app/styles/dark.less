@@ -1,0 +1,162 @@
+@font-gray: #aaa;
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: @base-blue;
+}
+/* 是否当前被激活 */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: @border-gray;
+}
+/* 顶部菜单选中样式 */
+.navbar-haima {
+  ul.navbar-nav {
+    li.active > a {
+      background: @base-blue!important;
+      color: #fff!important;
+    }
+  }
+}
+/* tab选中样式 */
+ul.nav-tabs {
+  background: @light-blue!important;
+
+  li.active > a {
+    background: @base-blue!important;
+    color: #fff!important;
+  }
+}
+/* 菜单选中时背景图对齐 */
+.main-navigation-menu > ul > li.active:hover > a:after {
+  left: 31px!important;
+}
+/* 左边一级菜单选中样式 */
+.main-navigation {
+  background-color: @bg-dark!important;
+  color: white;
+
+  ul > li.active > a {
+    background: black!important;
+    color: @base-blue!important;
+    border-left: 4px solid @base-blue;
+
+    i:first-child {
+      margin-left: -4px;
+    }
+  }
+
+  ul > li.active > ul.sub-menu > li a {
+    background: black!important;
+  }
+}
+
+.navbar-toggle {
+  background-color: #fff;
+}
+
+.main-navigation-menu > ul > li.active > a {
+  font-size: 1.05em;
+}
+
+.main-navigation-menu > ul > li a {
+  border-bottom: none;
+  border-top-color: @border-dark;
+}
+
+.main-navigation-menu > ul > li.active > a {
+  border-top: none!important;
+}
+
+.main-navigation-menu > ul > li > a:hover,
+.main-navigation-menu > ul > li.open,
+.main-navigation-menu > ul > li:hover > a {
+  background-color: @bg-sel-dark;
+  color: white;
+}
+/* 左边二级菜单样式 */
+.main-navigation-menu > ul > li > ul.sub-menu > li a {
+  background-color: @bg-dark!important;
+}
+/* 左边二级菜单鼠标滑过样式 */
+.main-navigation-menu > ul > li > ul.sub-menu > li a:hover {
+  color: white!important;
+  background: @bg-sel-dark!important;
+}
+/* 左边二级菜单选中样式 */
+.main-navigation-menu > ul > li > ul.sub-menu > li.active > a,
+.main-navigation-menu > ul > li.active > ul.sub-menu > li.active > div > a {
+  color: @base-blue!important;
+  // span {
+  //   margin-left: -3px;
+  // }
+}
+/* 左边三级菜单选中样式 */
+.main-navigation-menu > ul > li.active > ul.sub-menu > li.active > div > ul.sub-menu > li.active > a {
+  color: @base-blue!important;
+}
+/* 左边导航打开/收起按钮的样式 */
+.navigation-toggler {
+  color: rgba(255, 255, 255, .7);
+}
+
+.navigation-toggler:hover i {
+  color: rgba(255, 255, 255, .9);
+}
+
+.navigation-small .navigation-toggler:hover i {
+  color: rgba(255, 255, 255, .9);
+}
+/* 中间顶上导航的样式 */
+.breadcrumb {
+  background: @light-blue!important;
+
+  a,
+  i {
+    color: @base-blue;
+  }
+}
+/* input带图标的样式 */
+.input-group-btn {
+  i {
+    color: @base-blue;
+  }
+}
+/* table的标题行 */
+.mb-grid {
+  /* 图标配色 */
+  span.fa-plus {
+    color: @base-green;
+  }
+
+  span.fa-pencil-square-o {
+    color: @base-orange;
+  }
+
+  span.fa-trash-o {
+    color: @base-red;
+  }
+}
+
+.navigation-small .main-navigation-menu > ul > li.active > ul.sub-menu {
+  border-top: 1px solid @border-dark;
+}
+
+.navigation-small .main-navigation-menu > ul > li > ul.sub-menu > li > a {
+  margin-top: -1px;
+  border-top: 1px solid @border-dark;
+}
+@media (min-width:100px) and (max-width:991px) {
+  // .main-navigation-menu > ul > li.active > ul.sub-menu {
+  //   border-top: 1px solid @border-dark!important;
+  // }
+
+  .main-navigation-menu > ul > li > ul.sub-menu > li > a {
+    margin-top: -1px !important;
+    border-top: 1px solid @border-dark!important;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="addBtnEvent()">新增</button>
+      <button type="button" class="btn btn-default" ng-click="deleteBtnEvent()">删除</button>
+      <button type="button" class="btn btn-default" ng-click="editBtnEvent()">编辑</button>
+    </div>
+  </div>
+  <div id="mainGrid" ui-grid="hybridObj.gridOptions" class="gridCommon gridRow10" ui-grid-selection
+       ui-grid-resize-columns ui-grid-pagination ui-grid-auto-resize>
+  </div>
+</div>

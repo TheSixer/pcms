@@ -1,0 +1,212 @@
+{
+  "code": 200,
+  "data": {
+    "潜客管理(销售顾问)": {
+      "text": "潜客管理(销售顾问)",
+      "children": {
+        "客户跟进": {
+          "text": "客户跟进",
+          "children": {
+            "销售机会": {
+              "text": "销售机会",
+              "url": "/track/sales-chance-consultant"
+            },
+            "销售活动": {
+              "text": "销售活动",
+              "url": "/track/activity-consultant"
+            }
+          }
+        },
+        "统计分析": {
+          "text": "统计分析",
+          "children": {
+            "销售顾问订单": {
+              "text": "销售顾问订单",
+              "url": "/analysis/sales-order"
+            },
+            "销售顾问转化率": {
+              "text": "销售顾问转化率",
+              "url": "/analysis/sales-consultant-conversion-rate"
+            },
+            "跟进战败分析": {
+              "text": "跟进战败分析",
+              "url": "/analysis/track-defeat-consultant"
+            }
+          }
+        }
+      }
+    },
+    "潜客管理(经销商)": {
+      "text": "潜客管理(经销商)",
+      "children": {
+        "线索管理": {
+          "text": "线索管理",
+          "children": {
+            "线索管理": {
+              "text": "线索管理",
+              "url": "/clue/4s-manage"
+            },
+            "线索清洗": {
+              "text": "线索清洗",
+              "url": "/clue/duplicate"
+            },
+            "机会分配": {
+              "text": "机会分配",
+              "url": "/clue/assign-dealer"
+            }
+          }
+        },
+        "客户跟进": {
+          "text": "客户跟进",
+          "children": {
+            "客户画像": {
+              "text": "客户画像",
+              "url": "/track/potentialCustomer"
+            },
+            "销售机会": {
+              "text": "销售机会",
+              "url": "/track/chance"
+            },
+            "销售活动": {
+              "text": "销售活动",
+              "url": "/track/activity"
+            }
+          }
+        },
+        "统计分析": {
+          "text": "统计分析",
+          "children": {
+            "线索分析": {
+              "text": "线索分析",
+              "url": "/analysis/clue-analysis-dealer"
+            },
+            "车型分析": {
+              "text": "车型分析",
+              "url": "/analysis/car-model-dealer"
+            },
+            "销售顾问订单": {
+              "text": "销售顾问订单",
+              "url": "/analysis/sales-order-dealer"
+            },
+            "销售顾问转化率": {
+              "text": "销售顾问转化率",
+              "url": "/analysis/sales-consultant-conversion-rate-dealer"
+            },
+            "销售机会成交率": {
+              "text": "销售机会成交率",
+              "url": "/analysis/clue-lbr-dealer"
+            },
+            "邀约到店率": {
+              "text": "邀约到店率",
+              "url": "/analysis/arrive-rate-dealer"
+            },
+            "跟进战败分析": {
+              "text": "跟进战败分析",
+              "url": "/analysis/track-defeat"
+            }
+          }
+        }
+      }
+    },
+    "潜客管理(总部)": {
+      "text": "潜客管理(总部)",
+      "children": {
+        "线索管理": {
+          "text": "线索管理",
+          "children": {
+            "线索管理": {
+              "text": "线索管理",
+              "url": "/clue/manage"
+            },
+            "线索清洗": {
+              "text": "线索清洗",
+              "url": "/clue/duplicate-headquarters"
+            },
+            "机会分配": {
+              "text": "机会分配",
+              "url": "/clue/assign"
+            }
+          }
+        },
+        "统计分析": {
+          "text": "统计分析",
+          "children": {
+            "线索分析": {
+              "text": "线索分析",
+              "url": "/analysis/clue-analysis"
+            },
+            "车型分析": {
+              "text": "车型分析",
+              "url": "/analysis/car-model"
+            },
+            "KPI指标参考": {
+              "text": "KPI指标参考",
+              "url": "/analysis/KPI-index-reference"
+            },
+            "销售机会成交率": {
+              "text": "销售机会成交率",
+              "url": "/analysis/clue-lbr"
+            },
+            "邀约到店率": {
+              "text": "邀约到店率",
+              "url": "/analysis/arrive-rate"
+            },
+            "线索跟进反馈及时率": {
+              "text": "线索跟进反馈及时率",
+              "url": "/analysis/track-feedback-rate"
+            },
+            "运营平台分析": {
+              "text": "运营平台分析",
+              "url": "/analysis/operation-platform"
+            },
+            "4S店运营分析": {
+              "text": "4S店运营分析",
+              "url": "/analysis/operation-4s"
+            },
+            "区域运营分析": {
+              "text": "区域运营分析",
+              "url": "/analysis/operation-area"
+            },
+            "24小时线索处理率": {
+              "text": "24小时线索处理率",
+              "url": "/analysis/24hours-handle-rate"
+            },
+            "用户登录统计": {
+              "text": "用户登录统计",
+              "url": "/analysis/customer-login"
+            },
+            "跟进战败分析": {
+              "text": "跟进战败分析",
+              "url": "/analysis/track-defeat-hq"
+            }
+          }
+        },
+        "系统管理": {
+          "text": "系统管理",
+          "children": {
+            "导入接口管理": {
+              "text": "导入接口管理",
+              "url": "/system/import-if-mng"
+            },
+            "清洗规则管理": {
+              "text": "清洗规则管理",
+              "url": "/system/wash-rule-mng"
+            },
+            "分配规则管理": {
+              "text": "分配规则管理",
+              "url": "/system/dividend-rule-mng"
+            },
+            "标签管理": {
+              "text": "标签管理",
+              "url": "/system/label-mng"
+            },
+            "机会级别设置": {
+              "text": "机会级别设置",
+              "url": "/system/opportunity-level-setting"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,281 @@
+<div>
+  <mb-modal-header title="频次编辑" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+  <div class="modal-body body-sm" cg-busy="promise">
+    <div class="form-horizontal">
+      <div class="form-group">
+        <ng-form name="form">
+          <uib-tabset class="uib-common" active="mainTabsetActivitity">
+            <uib-tab id='miniute' index="1" heading="分钟">
+              <ng-form name="miniuteForm">
+                <div class="form-group">
+                  <div class="form-group"><div class="col-xs-1"></div><input type="checkbox" id="useMiniute" ng-model="frequency.useMiniute" style="float: left"/><label for="useMiniute" style="float: left;margin-top: 4px">使用分钟</label></div>
+                  <div class="form-group">
+                    <div class="col-xs-2"></div>
+                    <div class="col-12-12-6"><input id="everyMiniute" ng-model="frequency.everyMiniute" type="radio" ng-click="changeMiniuteSelect(false)" name="miniute" style="float: left" ng-disabled="miniuteMode"/><label for="everyMiniute" style="float: left;margin-top: 4px">每分钟</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-2"></div>
+                    <div class="col-12-12-6"><input id="setMiniute" ng-model="frequency.setMiniute" type="radio" ng-click="changeMiniuteSelect(true)" name="miniute" style="float: left" ng-disabled="miniuteMode"/><label for="setMiniute" style="float: left;margin-top: 4px">指定:</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute0" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute0" style="float: left;margin-top: 4px;">0</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute1" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute1" style="float: left;margin-top: 4px;">1</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute2" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute2" style="float: left;margin-top: 4px;">2</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute3" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute3" style="float: left;margin-top: 4px;">3</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute4" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute4" style="float: left;margin-top: 4px;">4</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute5" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute5" style="float: left;margin-top: 4px;">5</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute6" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute6" style="float: left;margin-top: 4px;">6</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute7" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute7" style="float: left;margin-top: 4px;">7</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute8" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute8" style="float: left;margin-top: 4px;">8</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute9" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute9" style="float: left;margin-top: 4px;">9</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute10" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute10" style="float: left;margin-top: 4px;">10</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute11" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute11" style="float: left;margin-top: 4px;">11</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute12" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute12" style="float: left;margin-top: 4px;">12</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute13" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute13" style="float: left;margin-top: 4px;">13</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute14" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute14" style="float: left;margin-top: 4px;">14</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute15" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute15" style="float: left;margin-top: 4px;">15</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute16" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute16" style="float: left;margin-top: 4px;">16</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute17" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute17" style="float: left;margin-top: 4px;">17</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute18" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute18" style="float: left;margin-top: 4px;">18</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute19" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute19" style="float: left;margin-top: 4px;">19</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute20" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute20" style="float: left;margin-top: 4px;">20</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute21" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute21" style="float: left;margin-top: 4px;">21</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute22" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute22" style="float: left;margin-top: 4px;">22</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute23" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute23" style="float: left;margin-top: 4px;">23</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute24" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute24" style="float: left;margin-top: 4px;">24</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute25" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute25" style="float: left;margin-top: 4px;">25</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute26" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute26" style="float: left;margin-top: 4px;">26</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute27" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute27" style="float: left;margin-top: 4px;">27</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute28" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute28" style="float: left;margin-top: 4px;">28</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute29" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute29" style="float: left;margin-top: 4px;">29</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute30" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute30" style="float: left;margin-top: 4px;">30</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute31" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute31" style="float: left;margin-top: 4px;">31</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute32" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute32" style="float: left;margin-top: 4px;">32</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute33" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute33" style="float: left;margin-top: 4px;">33</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute34" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute34" style="float: left;margin-top: 4px;">34</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute35" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute35" style="float: left;margin-top: 4px;">35</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute36" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute36" style="float: left;margin-top: 4px;">36</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute37" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute37" style="float: left;margin-top: 4px;">37</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute38" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute38" style="float: left;margin-top: 4px;">38</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute39" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute39" style="float: left;margin-top: 4px;">39</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute40" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute40" style="float: left;margin-top: 4px;">40</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute41" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute41" style="float: left;margin-top: 4px;">41</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute42" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute42" style="float: left;margin-top: 4px;">42</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute43" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute43" style="float: left;margin-top: 4px;">43</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute44" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute44" style="float: left;margin-top: 4px;">44</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute45" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute45" style="float: left;margin-top: 4px;">45</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute46" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute46" style="float: left;margin-top: 4px;">46</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute47" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute47" style="float: left;margin-top: 4px;">47</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute48" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute48" style="float: left;margin-top: 4px;">48</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute49" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute49" style="float: left;margin-top: 4px;">49</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute50" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute50" style="float: left;margin-top: 4px;">50</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute51" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute51" style="float: left;margin-top: 4px;">51</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute52" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute52" style="float: left;margin-top: 4px;">52</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute53" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute53" style="float: left;margin-top: 4px;">53</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute54" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute54" style="float: left;margin-top: 4px;">54</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute55" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute55" style="float: left;margin-top: 4px;">55</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute56" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute56" style="float: left;margin-top: 4px;">56</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute57" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute57" style="float: left;margin-top: 4px;">57</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute58" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute58" style="float: left;margin-top: 4px;">58</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute59" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute59" style="float: left;margin-top: 4px;">59</label></div>
+                    <div class="col-xs-1"><input type="radio" name="miniutes" id="miniute60" ng-disabled="miniuteDMode" style="float: left"/><label for="miniute60" style="float: left;margin-top: 4px;">60</label></div>
+                  </div>
+                </div>
+              </ng-form>
+            </uib-tab>
+            <uib-tab id='hour' index="2" heading="小时">
+              <ng-form name="hourForm" role="form">
+                <div class="form-group">
+                  <div class="form-group"><div class="col-xs-1"></div><input type="checkbox" id="useHour" ng-model="frequency.useHour" style="float: left"/><label for="useHour" style="float: left;margin-top: 4px">使用小时</label></div>
+                  <div class="form-group">
+                    <div class="col-xs-2"></div>
+                    <div class="col-12-12-6"><input id="everyHour" ng-model="frequency.everyHour" type="radio" ng-click="changeHourSelect(false)" name="hour" style="float: left" ng-disabled="hourMode"/><label for="everyHour" style="float: left;margin-top: 4px">每小时</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-2"></div>
+                    <div class="col-12-12-6"><input id="setHour" ng-model="frequency.setHour" type="radio" ng-click="changeHourSelect(true)" name="hour" style="float: left" ng-disabled="hourMode"/><label for="setHour" style="float: left;margin-top: 4px">指定:</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour1" ng-disabled="hourDMode" style="float: left"/><label for="hour1" style="float: left;margin-top: 4px;">1</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour2" ng-disabled="hourDMode" style="float: left"/><label for="hour2" style="float: left;margin-top: 4px;">2</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour3" ng-disabled="hourDMode" style="float: left"/><label for="hour3" style="float: left;margin-top: 4px;">3</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour4" ng-disabled="hourDMode" style="float: left"/><label for="hour4" style="float: left;margin-top: 4px;">4</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour5" ng-disabled="hourDMode" style="float: left"/><label for="hour5" style="float: left;margin-top: 4px;">5</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour6" ng-disabled="hourDMode" style="float: left"/><label for="hour6" style="float: left;margin-top: 4px;">6</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour7" ng-disabled="hourDMode" style="float: left"/><label for="hour7" style="float: left;margin-top: 4px;">7</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour8" ng-disabled="hourDMode" style="float: left"/><label for="hour8" style="float: left;margin-top: 4px;">8</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour9" ng-disabled="hourDMode" style="float: left"/><label for="hour9" style="float: left;margin-top: 4px;">9</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour10" ng-disabled="hourDMode" style="float: left"/><label for="hour10" style="float: left;margin-top: 4px;">10</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour11" ng-disabled="hourDMode" style="float: left"/><label for="hour11" style="float: left;margin-top: 4px;">11</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour12" ng-disabled="hourDMode" style="float: left"/><label for="hour12" style="float: left;margin-top: 4px;">12</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour13" ng-disabled="hourDMode" style="float: left"/><label for="hour13" style="float: left;margin-top: 4px;">13</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour14" ng-disabled="hourDMode" style="float: left"/><label for="hour14" style="float: left;margin-top: 4px;">14</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour15" ng-disabled="hourDMode" style="float: left"/><label for="hour15" style="float: left;margin-top: 4px;">15</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour16" ng-disabled="hourDMode" style="float: left"/><label for="hour16" style="float: left;margin-top: 4px;">16</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour17" ng-disabled="hourDMode" style="float: left"/><label for="hour17" style="float: left;margin-top: 4px;">17</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour18" ng-disabled="hourDMode" style="float: left"/><label for="hour18" style="float: left;margin-top: 4px;">18</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour19" ng-disabled="hourDMode" style="float: left"/><label for="hour19" style="float: left;margin-top: 4px;">19</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour20" ng-disabled="hourDMode" style="float: left"/><label for="hour20" style="float: left;margin-top: 4px;">20</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour21" ng-disabled="hourDMode" style="float: left"/><label for="hour21" style="float: left;margin-top: 4px;">21</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour22" ng-disabled="hourDMode" style="float: left"/><label for="hour22" style="float: left;margin-top: 4px;">22</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour23" ng-disabled="hourDMode" style="float: left"/><label for="hour23" style="float: left;margin-top: 4px;">23</label></div>
+                    <div class="col-xs-1"><input type="radio" name="hours" id="hour24" ng-disabled="hourDMode" style="float: left"/><label for="hour24" style="float: left;margin-top: 4px;">24</label></div>
+                  </div>
+                </div>
+              </ng-form>
+            </uib-tab>
+            <uib-tab id='day' index="3" heading="天">
+              <ng-form name="dayForm" role="form">
+                <div class="form-group">
+                  <div class="form-group"><div class="col-xs-1"></div><input type="checkbox" id="useDay" ng-model="frequency.useDay" style="float: left"/><label for="useDay" style="float: left;margin-top: 4px">使用小时</label></div>
+                  <div class="form-group">
+                    <div class="col-xs-2"></div>
+                    <div class="col-12-12-6"><input id="everyDay" ng-model="frequency.everyDay" type="radio" ng-click="changeDaySelect(false)" name="day" style="float: left" ng-disabled="dayMode"/><label for="everyDay" style="float: left;margin-top: 4px">每小时</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-2"></div>
+                    <div class="col-12-12-6"><input id="setDay" ng-model="frequency.setDay" type="radio" ng-click="changeDaySelect(true)" name="day" style="float: left" ng-disabled="dayMode"/><label for="setDay" style="float: left;margin-top: 4px">指定:</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day1" ng-disabled="dayDMode" style="float: left"/><label for="day1" style="float: left;margin-top: 4px;">1</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day2" ng-disabled="dayDMode" style="float: left"/><label for="day2" style="float: left;margin-top: 4px;">2</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day3" ng-disabled="dayDMode" style="float: left"/><label for="day3" style="float: left;margin-top: 4px;">3</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day4" ng-disabled="dayDMode" style="float: left"/><label for="day4" style="float: left;margin-top: 4px;">4</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day5" ng-disabled="dayDMode" style="float: left"/><label for="day5" style="float: left;margin-top: 4px;">5</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day6" ng-disabled="dayDMode" style="float: left"/><label for="day6" style="float: left;margin-top: 4px;">6</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day7" ng-disabled="dayDMode" style="float: left"/><label for="day7" style="float: left;margin-top: 4px;">7</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day8" ng-disabled="dayDMode" style="float: left"/><label for="day8" style="float: left;margin-top: 4px;">8</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day9" ng-disabled="dayDMode" style="float: left"/><label for="day9" style="float: left;margin-top: 4px;">9</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day10" ng-disabled="dayDMode" style="float: left"/><label for="day10" style="float: left;margin-top: 4px;">10</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day11" ng-disabled="dayDMode" style="float: left"/><label for="day11" style="float: left;margin-top: 4px;">11</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day12" ng-disabled="dayDMode" style="float: left"/><label for="day12" style="float: left;margin-top: 4px;">12</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day13" ng-disabled="dayDMode" style="float: left"/><label for="day13" style="float: left;margin-top: 4px;">13</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day14" ng-disabled="dayDMode" style="float: left"/><label for="day14" style="float: left;margin-top: 4px;">14</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day15" ng-disabled="dayDMode" style="float: left"/><label for="day15" style="float: left;margin-top: 4px;">15</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day16" ng-disabled="dayDMode" style="float: left"/><label for="day16" style="float: left;margin-top: 4px;">16</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day17" ng-disabled="dayDMode" style="float: left"/><label for="day17" style="float: left;margin-top: 4px;">17</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day18" ng-disabled="dayDMode" style="float: left"/><label for="day18" style="float: left;margin-top: 4px;">18</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day19" ng-disabled="dayDMode" style="float: left"/><label for="day19" style="float: left;margin-top: 4px;">19</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day20" ng-disabled="dayDMode" style="float: left"/><label for="day20" style="float: left;margin-top: 4px;">20</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day21" ng-disabled="dayDMode" style="float: left"/><label for="day21" style="float: left;margin-top: 4px;">21</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day22" ng-disabled="dayDMode" style="float: left"/><label for="day22" style="float: left;margin-top: 4px;">22</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day23" ng-disabled="dayDMode" style="float: left"/><label for="day23" style="float: left;margin-top: 4px;">23</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day24" ng-disabled="dayDMode" style="float: left"/><label for="day24" style="float: left;margin-top: 4px;">24</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day25" ng-disabled="dayDMode" style="float: left"/><label for="day25" style="float: left;margin-top: 4px;">25</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day26" ng-disabled="dayDMode" style="float: left"/><label for="day26" style="float: left;margin-top: 4px;">26</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day27" ng-disabled="dayDMode" style="float: left"/><label for="day27" style="float: left;margin-top: 4px;">27</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day28" ng-disabled="dayDMode" style="float: left"/><label for="day28" style="float: left;margin-top: 4px;">28</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day29" ng-disabled="dayDMode" style="float: left"/><label for="day29" style="float: left;margin-top: 4px;">29</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day30" ng-disabled="dayDMode" style="float: left"/><label for="day30" style="float: left;margin-top: 4px;">30</label></div>
+                    <div class="col-xs-1"><input type="radio" name="days" id="day31" ng-disabled="dayDMode" style="float: left"/><label for="day31" style="float: left;margin-top: 4px;">31</label></div>
+                  </div>
+                </div>
+              </ng-form>
+            </uib-tab>
+            <uib-tab id='weekend' index="4" heading="星期">
+              <ng-form name="weekendForm" role="form">
+                <div class="form-group">
+                  <div class="form-group"><div class="col-xs-1"></div><input type="checkbox" id="useWeekend" ng-model="frequency.useWeekend" style="float: left"/><label for="useWeekend" style="float: left;margin-top: 4px">使用星期</label></div>
+                  <div class="form-group">
+                    <div class="col-xs-2"></div>
+                    <div class="col-12-12-6"><input id="everyWeekend" ng-model="frequency.everyWeekend" type="radio" ng-click="changeWeekendSelect(false)" name="weekend" style="float: left" ng-disabled="weekendMode"/><label for="everyWeekend" style="float: left;margin-top: 4px">每星期</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-2"></div>
+                    <div class="col-12-12-6"><input id="setWeekend" ng-model="frequency.setWeekend" type="radio" ng-click="changeWeekendSelect(true)" name="weekend" style="float: left" ng-disabled="weekendMode"/><label for="setWeekend" style="float: left;margin-top: 4px">指定:</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-1"><input type="checkbox" id="monday" ng-disabled="weekendDMode" style="float: left"/><label for="monday" style="float: left;">星期一</label></div>
+                    <div class="col-xs-1"><input type="checkbox" id="tuesday" ng-disabled="weekendDMode" style="float: left"/><label for="tuesday" style="float: left;">星期二</label></div>
+                    <div class="col-xs-1"><input type="checkbox" id="wednesday" ng-disabled="weekendDMode" style="float: left"/><label for="wednesday" style="float: left;">星期三</label></div>
+                    <div class="col-xs-1"><input type="checkbox" id="thursday" ng-disabled="weekendDMode" style="float: left"/><label for="thursday" style="float: left;">星期四</label></div>
+                    <div class="col-xs-1"><input type="checkbox" id="friday" ng-disabled="weekendDMode" style="float: left"/><label for="friday" style="float: left;">星期五</label></div>
+                    <div class="col-xs-1"><input type="checkbox" id="saturday" ng-disabled="weekendDMode" style="float: left"/><label for="saturday" style="float: left;">星期六</label></div>
+                    <div class="col-xs-1"><input type="checkbox" id="sunday" ng-disabled="weekendDMode" style="float: left"/><label for="sunday" style="float: left;">星期日</label></div>
+                  </div>
+                </div>
+              </ng-form>
+            </uib-tab>
+            <uib-tab id='month' index="5" heading="月">
+              <ng-form name="monthForm" role="form">
+                <div class="form-group">
+                  <div class="form-group"><div class="col-xs-1"></div><input type="checkbox" id="useMonth" ng-model="frequency.useMonth" style="float: left"/><label for="useMonth" style="float: left;margin-top: 4px">使用月份</label></div>
+                  <div class="form-group">
+                    <div class="col-xs-2"></div>
+                    <div class="col-12-12-6"><input id="everyMonth" ng-model="frequency.everyMonth" type="radio" ng-click="changeMonthSelect(false)" name="month" style="float: left" ng-disabled="monthMode"/><label for="everyMonth" style="float: left;margin-top: 4px">每月</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-2"></div>
+                    <div class="col-12-12-6"><input id="setMonth" ng-model="frequency.setMonth" type="radio" ng-click="changeMonthSelect(true)" name="month" style="float: left" ng-disabled="monthMode"/><label for="setMonth" style="float: left;margin-top: 4px">指定:</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-2"><input type="checkbox" id="janurary" ng-disabled="monthDMode" style="float: left"/><label for="janurary" style="float: left;margin-top: 4px;">一月</label></div>
+                    <div class="col-xs-2"><input type="checkbox" id="february" ng-disabled="monthDMode" style="float: left"/><label for="february" style="float: left;margin-top: 4px;">二月</label></div>
+                    <div class="col-xs-2"><input type="checkbox" id="march" ng-disabled="monthDMode" style="float: left"/><label for="march" style="float: left;margin-top: 4px;">三月</label></div>
+                    <div class="col-xs-2"><input type="checkbox" id="april" ng-disabled="monthDMode" style="float: left"/><label for="april" style="float: left;margin-top: 4px;">四月</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-2"><input type="checkbox" id="may" ng-disabled="monthDMode" style="float: left"/><label for="may" style="float: left;margin-top: 4px;">五月</label></div>
+                    <div class="col-xs-2"><input type="checkbox" id="june" ng-disabled="monthDMode" style="float: left"/><label for="june" style="float: left;margin-top: 4px;">六月</label></div>
+                    <div class="col-xs-2"><input type="checkbox" id="july" ng-disabled="monthDMode" style="float: left"/><label for="july" style="float: left;margin-top: 4px;">七月</label></div>
+                    <div class="col-xs-2"><input type="checkbox" id="august" ng-disabled="monthDMode" style="float: left"/><label for="august" style="float: left;margin-top: 4px;">八月</label></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-2"><input type="checkbox" id="september" ng-disabled="monthDMode" style="float: left"/><label for="september" style="float: left;margin-top: 4px;">九月</label></div>
+                    <div class="col-xs-2"><input type="checkbox" id="october" ng-disabled="monthDMode" style="float: left"/><label for="october" style="float: left;margin-top: 4px;">十月</label></div>
+                    <div class="col-xs-2"><input type="checkbox" id="november" ng-disabled="monthDMode" style="float: left"/><label for="november" style="float: left;margin-top: 4px;">十一月</label></div>
+                    <div class="col-xs-2"><input type="checkbox" id="december" ng-disabled="monthDMode" style="float: left"/><label for="december" style="float: left;margin-top: 4px;">十二月</label></div>
+                  </div>
+                </div>
+              </ng-form>
+            </uib-tab>
+          </uib-tabset>
+        </ng-form>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+    <button class="btn btn-sm btn-primary" ng-click="ok()">确定</button>
+  </div>
+</div>

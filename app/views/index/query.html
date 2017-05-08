@@ -1,0 +1,44 @@
+<div class="row sub-container private-query" ng-controller="QueryCtrl" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-disabled="form.$invalid" ng-click="query(true)">提交</button>
+      <button type="button" class="btn btn-default" ng-disabled="form.$invalid" ng-click="exportExcel(this,0)">导出excel</button>
+      <button type="button" class="btn btn-default" ng-disabled="form.$invalid" ng-click="exportExcel(this,1)">打印</button>
+      <button type="button" class="btn btn-default" ng-click="refresh()">重置</button>
+    </div>
+  </div>
+  <ng-form name="form" class="form-horizontal">
+    <uib-accordion close-others="false">
+      <div uib-accordion-group class="panel-default">
+        <uib-accordion-heading>
+          <i class="pull-left fa fa-fw accordion-arrow"></i>
+          <span class="w-full block">查询条件</span>
+        </uib-accordion-heading>
+        <div class="form-group">
+          <div class="col-12-6-3 div-inrow" ng-repeat="filter in filters track by $index">
+            <input-combo-r type="{{filter.type}}" title="{{filter.title}}" idname="{{filter.idname}}" err-msg="{{filter.errMsg}}" source-data="filter.sourceData" select-idx="{{filter.selectIdx}}" ng-model="filter.model" ng-required="filter.required"></input-combo-r>
+          </div>
+        </div>
+      </div>
+    </uib-accordion>
+
+    <div class="form-group">
+      <div class="col-12-12-12">
+        <div class="panel-header">
+          <span class="control-label">{{tableTitle}}</span>
+        </div>
+        <div class="div-grid" ng-show="!loading && grid.rows && grid.rows.length > 0">
+          <table class="table table-bordered table-condensed table-striped table-report">
+            <tr ng-repeat="headRows in tableHead track by $index">
+              <th ng-repeat="row in headRows track by $index" colspan="{{row.colspan || 1}}" rowspan="{{row.rowspan || 1}}" class="{{row.align || center}}">{{row.title}}</th>
+            </tr>
+            <tr ng-repeat="row in grid.rows track by $index">
+              <td ng-repeat="cell in row track by cell.id">{{cell.value}}</td>
+            </tr>
+          </table>
+        </div>
+        <mb-pager></mb-pager>
+      </div>
+    </div>
+  </ng-form>
+</div>

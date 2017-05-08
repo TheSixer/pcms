@@ -1,0 +1,26 @@
+<mb-modal-header title="接口编辑" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+<div class="modal-body body-sm" cg-busy="promise">
+  <form class="form-horizontal" name="form" role="form">
+    <div class="form-group">
+      <div class="col-12-11-11">
+        <input-combo type="text" title="接口名称" idname="name" ng-model="IfData.name" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-11-11">
+        <input-combo type="text" title="接口地址" idname="url" ng-model="IfData.url" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-11-11">
+        <input-combo class="bs-switch" type="switch" title="是否生效" idname="isEnable" ng-model="IfData.isEnable"></input-combo>
+      </div>
+      <div class="col-12-11-11">
+        <input-combo type="select" title="导入频次" idname="frequency" ng-model="IfData.frequency" source-data="codeMaster.frequency" ng-required="true"></input-combo>
+      </div>
+      <!--<div class="col-12-11-11">-->
+        <!--<input-combo type="text" title="备注" idname="remark" ng-model="IfData.remark"></input-combo>-->
+      <!--</div>-->
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+  <button class="btn btn-sm btn-primary" ng-click="ok()" ng-disabled="form.$invalid">确定</button>
+</div>

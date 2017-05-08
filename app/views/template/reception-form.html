@@ -1,0 +1,704 @@
+<form class="form-horizontal" name="form">
+  <div class="form-group">
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="order_no">工单号</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="order_no" type="text" ng-model="main.order_no" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="comedate">进厂时间</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="comedate" type="text" ng-model="main.comedate" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="p_incar">预计交车</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="p_incar" type="text" ng-model="main.p_incar" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="ordername">服务顾问</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="ordername" type="text" ng-model="main.ordername" disabled>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="username">车主姓名</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="username" type="text" ng-model="main.username" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="sendname">送修人</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="sendname" type="text" ng-model="main.sendname" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="phone">移动电话</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="phone" type="text" ng-model="main.phone" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="vip">会员类别</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="vip" type="text" ng-model="main.vip" disabled>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="plate_no">牌照号码</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="plate_no" type="text" ng-model="main.plate_no" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="buydate">购车日期</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="buydate" type="text" ng-model="main.buydate" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="vin">VIN</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="vin" type="text" ng-model="main.vin" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="engine_no">发动机号</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="engine_no" type="text" ng-model="main.engine_no" disabled>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="brand">品牌</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="brand" type="text" ng-model="main.brand" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="modelcode">车型</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="modelcode" type="text" ng-model="main.modelcode" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="color">颜色</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="color" type="text" ng-model="main.color" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="insurancecompany">保险公司</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="insurancecompany" type="text" ng-model="main.insurancecompany" disabled>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="mileage">进厂里程</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="mileage" type="text" ng-model="main.mileage" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <input-combo type="dropdown" title="剩余油量" idname="oil" ng-model="main.oil" ng-disabled="true"></input-combo>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="lastintofactory">上次进厂</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="lastintofactory" type="text" ng-model="main.lastintofactory" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="car_state_name">车辆状态</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="car_state_name" type="text" ng-model="main.car_state_name" disabled>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="type">业务类别</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="type" type="text" ng-model="main.type" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="p_collection">预收款</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="p_collection" type="text" ng-model="main.p_collection" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="ordernum">预约单号</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="ordernum" type="text" ng-model="main.ordernum" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="ap">预修</label>
+      <div class="col-xs-8 checkbox">
+        <input bs-switch type="checkbox" id="ap" name="ap" ng-model="main.isAp" switch-active="false" switch-on-text="是" switch-off-text="否" switch-size='mini' switch-animate="false" switch-on-color="success" switch-off-color="default">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-4-2-1" for="checks">环检记录</label>
+    <div class="col-8-4-8">
+      <input class="form-control" id="checks" type="text" ng-model="main.checks" disabled="">
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="washcar">洗车服务</label>
+      <div class="col-xs-8">
+        <input bs-switch type="checkbox" id="washcar" name="washcar" ng-model="main.isWashcar" switch-active="false" switch-on-text="是" switch-off-text="否" switch-size='mini' switch-animate="false" switch-on-color="success" switch-off-color="default">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-4-2-1" for="centent">顾客陈述</label>
+    <div class="col-8-4-8">
+      <input class="form-control" id="centent" type="text" ng-model="main.centent" disabled="">
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="olddeal">旧件处理</label>
+      <div class="col-xs-8">
+        <input bs-switch type="checkbox" id="olddeal" name="olddeal" ng-model="main.isOlddeal" switch-active="false" switch-on-text="带走" switch-off-text="丢弃" switch-size='mini' switch-animate="false" switch-on-color="success" switch-off-color="default">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-4-2-1" for="note">备注</label>
+    <div class="col-8-10-11">
+      <input class="form-control" id="note" type="text" ng-model="main.note" disabled="">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-12-6-3">
+      <label class="control-label col-4-4-6" for="out_space_start">外出服务地点（起）</label>
+      <div class="col-8-8-6">
+        <input class="form-control" id="out_space_start" type="text" ng-model="main.out_space_start" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-4-4-6" for="out_space_end">外出服务地点（止）</label>
+      <div class="col-8-8-6">
+        <input class="form-control" id="out_space_end" type="text" ng-model="main.out_space_end" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="out_mileage">外出服务里程</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="out_mileage" type="text" ng-model="main.out_mileage" disabled>
+      </div>
+    </div>
+    <div class="col-12-6-3">
+      <label class="control-label col-xs-4" for="out_price">外出服务费用</label>
+      <div class="col-xs-8">
+        <input class="form-control" id="out_price" type="text" ng-model="main.out_price" disabled>
+      </div>
+    </div>
+  </div>
+
+  <uib-tabset active="active" class="uib-common">
+    <uib-tab index="0" heading="诊断记录" class="">
+      <div class="mb-grid">
+        <div class="div-grid-xs">
+          <table class="table table-bordered table-condensed table-striped table-has-header">
+            <tr>
+              <th>序号</th>
+              <th>故障代码</th>
+              <th>故障现象</th>
+              <th>检测代码</th>
+              <th>检测名称</th>
+              <th>是否拆检</th>
+              <th>拆检人</th>
+              <th>拆检时间</th>
+              <th>服务顾问</th>
+              <th>是否厂家(HMC/haima)支持</th>
+              <th>是否车间检查</th>
+              <th>是否路试</th>
+              <th>路试人</th>
+              <th>路试时间</th>
+              <th>记录人</th>
+              <th>记录时间</th>
+              <th>建议维修项目代码</th>
+              <th>项目名称</th>
+            </tr>
+            <tr ng-repeat="row in data.diagnoseRecords track by $index">
+              <td>{{$index+1}}</td>
+              <td>{{row.fault_code}}</td>
+              <td>{{row.fault_phenomenon}}</td>
+              <td>{{row.detect_code}}</td>
+              <td>{{row.detect_name}}</td>
+              <td>{{row.is_detect}}</td>
+              <td>{{row.detect_man}}</td>
+              <td>{{row.detect_time}}</td>
+              <td>{{row.service_adviser}}</td>
+              <td>{{row.is_support}}</td>
+              <td>{{row.is_check}}</td>
+              <td>{{row.is_road}}</td>
+              <td>{{row.road_man}}</td>
+              <td>{{row.road_time}}</td>
+              <td>{{row.record_man}}</td>
+              <td>{{row.record_time}}</td>
+              <td>{{row.suggest_project_code}}</td>
+              <td>{{row.project_name}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </uib-tab>
+
+    <uib-tab index="1" heading="维修项目" class="">
+      <div class="mb-grid">
+        <div class="div-grid-xs">
+          <table class="table table-bordered table-condensed table-striped table-has-header">
+            <tr>
+              <th>序号</th>
+              <th>项目代码</th>
+              <th>项目名称</th>
+              <th>工种</th>
+              <th>账类</th>
+              <th>工时</th>
+              <th>工时单价</th>
+              <th>优惠前工时金额</th>
+              <th>工时*单价</th>
+              <th>折扣</th>
+              <th>优惠后工时金额</th>
+              <th>保险比例</th>
+              <th>项目类别</th>
+            </tr>
+            <tr ng-repeat="row in data.maintItems track by $index">
+              <td>{{$index+1}}</td>
+              <td>{{row.project_code}}</td>
+              <td>{{row.project_name}}</td>
+              <td>{{row.work_type | codeMasterFilter : 'work_type'}}</td>
+              <td>{{row.account_type}}</td>
+              <td>{{row.work_time}}</td>
+              <td>{{row.work_time_price}}</td>
+              <td>{{row.before_money}}</td>
+              <td>{{row.is_time_price | codeMasterFilter : 'binary'}}</td>
+              <td>{{row.discount}}</td>
+              <td>{{row.after_money}}</td>
+              <td>{{row.insure_scale}}</td>
+              <td>{{row.project_type}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </uib-tab>
+
+    <uib-tab index="2" heading="需求配件" class="">
+      <div class="mb-grid">
+        <div class="div-grid-xs">
+          <table class="table table-bordered table-condensed table-striped">
+            <tr>
+              <th>序号</th>
+              <th>项目代码</th>
+              <th>项目名称</th>
+              <th>配件编码</th>
+              <th>配件名称</th>
+              <th>车型</th>
+              <th>账类</th>
+              <th>需求数量</th>
+              <th>单位</th>
+              <th>销售单价</th>
+              <th>折扣</th>
+              <th>保险比例</th>
+              <th>优惠后金额</th>
+              <th>备注</th>
+              <th>领料数量</th>
+              <th>可售数量</th>
+              <th>库存预留</th>
+              <th>预留说明</th>
+              <th>实际库存</th>
+              <th>缺货数量</th>
+              <th>需求单号</th>
+              <th>原厂标准</th>
+              <th>出库单号</th>
+              <th>套餐代码</th>
+            </tr>
+            <tr ng-repeat="row in data.partsItems track by $index">
+              <td>{{$index+1}}</td>
+              <td>{{row.project_code}}</td>
+              <td>{{row.project_name}}</td>
+              <td>{{row.parts_code}}</td>
+              <td>{{row.parts_name}}</td>
+              <td>{{row.car_type}}</td>
+              <td>{{row.account_type}}</td>
+              <td>{{row.need_num}}</td>
+              <td>{{row.unit}}</td>
+              <td>{{row.sale_price}}</td>
+              <td>{{row.discount}}</td>
+              <td>{{row.insure_scale}}</td>
+              <td>{{row.project_code}}</td>
+              <td>{{row.remark}}</td>
+              <td>{{row.material_num}}</td>
+              <td>{{row.sale_num}}</td>
+              <td>{{row.reverse_num}}</td>
+              <td>{{row.reverse_remark}}</td>
+              <td>{{row.real_stock_num}}</td>
+              <td>{{row.shortage_num}}</td>
+              <td>{{row.need_no}}</td>
+              <td>{{row.original_standard}}</td>
+              <td>{{row.out_no}}</td>
+              <td>{{row.combo_code}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </uib-tab>
+
+    <uib-tab index="3" heading="领用配件" class="">
+      <div class="mb-grid">
+        <div class="div-grid-xs">
+          <table class="table table-bordered table-condensed table-striped table-has-header">
+            <tr>
+              <th>序号</th>
+              <th>配件编码</th>
+              <th>配件名称</th>
+              <th>车型</th>
+              <th>规格</th>
+              <th>帐类</th>
+              <th>领料数量</th>
+              <th>单位</th>
+              <th>销售单价</th>
+              <th>折扣</th>
+              <th>保险比例</th>
+              <th>优惠后金额</th>
+              <th>出库日期</th>
+              <th>出库单号</th>
+              <th>领料员</th>
+              <th>原厂标准</th>
+              <th>项目代码</th>
+              <th>项目名称</th>
+            </tr>
+            <tr ng-repeat="row in data.receiveItems track by $index">
+              <td>{{$index+1}}</td>
+              <td>{{row.sn}}</td>
+              <td>{{row.cn_name}}</td>
+              <td>{{row.fit_car_type}}</td>
+              <td>{{row.spec}}</td>
+              <td>{{row.account_type}}</td>
+              <td>{{row.f6}}</td>
+              <td>{{row.unit}}</td>
+              <td>{{row.sale_price}}</td>
+              <td>{{row.discount}}</td>
+              <td>{{row.f10}}</td>
+              <td>{{row.f11}}</td>
+              <td>{{row.f12}}</td>
+              <td>{{row.f13}}</td>
+              <td>{{row.f14}}</td>
+              <td>{{row.f15}}</td>
+              <td>{{row.item_code}}</td>
+              <td>{{row.item_name}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </uib-tab>
+
+    <uib-tab index="4" heading="附加项目" class="">
+      <div class="mb-grid">
+        <div class="div-grid-xs">
+          <table class="table table-bordered table-condensed table-striped">
+            <tr>
+              <th>序号</th>
+              <th>项目代码</th>
+              <th>项目名称</th>
+              <th>项目类别</th>
+              <th>帐类</th>
+              <th>班组</th>
+              <th>金额</th>
+              <th>折扣</th>
+            </tr>
+            <tr ng-repeat="row in data.appendItems track by $index">
+              <td>{{$index+1}}</td>
+              <td>{{row.project_code}}</td>
+              <td>{{row.project_name}}</td>
+              <td>{{row.project_type}}</td>
+              <td>{{row.account_type}}</td>
+              <td>{{row.team}}</td>
+              <td>{{row.before_money}}</td>
+              <td>{{row.discount}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </uib-tab>
+
+    <uib-tab index="5" heading="建议维修项目" class="">
+      <div class="mb-grid">
+        <div class="div-grid-xs">
+          <table class="table table-bordered table-condensed table-striped">
+            <tr>
+              <th>序号</th>
+              <th>项目代码</th>
+              <th>项目名称</th>
+              <th>工种</th>
+              <th>帐类</th>
+              <th>工时</th>
+              <th>工时单价</th>
+              <th>工时金额</th>
+              <th>备注</th>
+            </tr>
+            <tr ng-repeat="row in data.suggestItems track by $index">
+              <td>{{$index+1}}</td>
+              <td>{{row.project_code}}</td>
+              <td>{{row.project_name}}</td>
+              <td>{{row.work_type | codeMasterFilter : 'work_type'}}</td>
+              <td>{{row.account_type}}</td>
+              <td>{{row.work_time}}</td>
+              <td>{{row.work_price}}</td>
+              <td>{{row.work_amount}}</td>
+              <td>{{row.remark}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </uib-tab>
+
+    <uib-tab index="6" heading="其他信息" class="">
+      <div class="form-group">
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="user_id">车主证件号</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="user_id" type="text" ng-model="other.user_id" disabled>
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="complation_date">竣工日期</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="complation_date" type="text" ng-model="other.complation_date" disabled>
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="cash_date">收银日期</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="cash_date" type="text" ng-model="other.cash_date" disabled>
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="is_change_mileage">是否更换里程表</label>
+          <div class="col-xs-8">
+            <input bs-switch type="checkbox" id="is_change_mileage" ng-model="other.isChangeMileage" switch-active="false" switch-on-text="是" switch-off-text="否" switch-size='mini' switch-animate="false" switch-on-color="success" switch-off-color="default">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="enter_way">进厂方式</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="enter_way" type="text" ng-model="other.enter_way" disabled>
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="complation_man">竣工人</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="complation_man" type="text" ng-model="other.complation_man" disabled>
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="cashier">收银人</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="cashier" type="text" ng-model="other.cashier" disabled>
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="is_explain_user">是否向顾客解释</label>
+          <div class="col-xs-8">
+            <input bs-switch type="checkbox" id="is_explain_user" ng-model="other.isExplainUser" switch-active="false" switch-on-text="是" switch-off-text="否" switch-size='mini' switch-animate="false" switch-on-color="success" switch-off-color="default">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="user_type">客户种类</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="user_type" type="text" ng-model="other.user_type" disabled>
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="account_date">结算日期</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="account_date" type="text" ng-model="other.account_date" ng-disabled="true">
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="cash_list_num">收银单号</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="cash_list_num" type="text" ng-model="other.cash_list_num" ng-disabled="true">
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="is_show_old">是否展示旧件</label>
+          <div class="col-xs-8">
+            <input bs-switch type="checkbox" id="is_show_old" ng-model="other.isShowOld" switch-active="false" switch-on-text="是" switch-off-text="否" switch-size='mini' switch-animate="false" switch-on-color="success" switch-off-color="default">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="brand">厂牌</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="brand" type="text" ng-model="other.brand" disabled>
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="account_man">结算人</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="account_man" type="text" ng-model="other.account_man" disabled>
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="bill_num">发票号码</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="bill_num" type="text" ng-model="other.bill_num" disabled>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="theory_date">理论交车时间</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="theory_date" type="text" ng-model="other.theory_date" disabled>
+          </div>
+        </div>
+        <div class="col-12-6-3">
+          <label class="control-label col-xs-4" for="leave_mileage">出厂里程</label>
+          <div class="col-xs-8">
+            <input class="form-control" id="leave_mileage" type="text" ng-model="other.leave_mileage" disabled>
+          </div>
+        </div>
+      </div>
+    </uib-tab>
+
+    <uib-tab index="7" heading="三包信息" class="">
+      <div class="form-group">
+        <div class="col-12-6-3">
+          <label class="control-label" for="three_fault_describe">三包故障描述</label>
+          <div>
+            <input class="form-control" id="three_fault_describe" type="text" ng-model="main.three_fault_describe" disabled/>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label class="control-label" for="three_check_result">三包检查结果</label>
+          <textarea class="form-control" id="three_check_result" rows="6" ng-model="main.three_check_result" disabled></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-12-6-4">
+          <label class="control-label col-xs-4" for="checks">是否交通补偿</label>
+          <div class="col-xs-2">
+            <select class="form-control" id="is_traffic_offset" ng-model="main.is_traffic_offset" ng-options="obj.code as obj.value for obj in codeMaster.commonFlg" disabled></select>
+          </div>
+          <div class="col-xs-6">
+            <select class="form-control" id="offset_type" ng-model="main.offset_type" ng-options="obj.code as obj.value for obj in codeMaster.offset_type" disabled></select>
+          </div>
+        </div>
+      </div>
+    </uib-tab>
+  </uib-tabset>
+  <div class="form-group mb-grid">
+    <div class="col-12-12-7 settlement">
+      <table class="table table-bordered table-condensed table-striped">
+        <tr>
+          <th>结算信息</th>
+          <th>优惠后工时金额</th>
+          <th>优惠后材料金额</th>
+          <th>优惠后其他金额</th>
+          <th>优惠后总计金额</th>
+        </tr>
+        <tr>
+          <td>客账</td>
+          <td class="text-right">{{settleInfo.c_wage_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.c_part_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.c_other_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.stat_c_after | moneyDefault}}</td>
+        </tr>
+        <tr>
+          <td>内部账</td>
+          <td class="text-right">{{settleInfo.i_wage_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.i_part_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.i_other_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.stat_i_after | moneyDefault}}</td>
+        </tr>
+        <tr>
+          <td>索赔账</td>
+          <td class="text-right">{{settleInfo.w_wage_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.w_part_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.w_other_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.stat_w_after | moneyDefault}}</td>
+        </tr>
+        <tr>
+          <td>保险账</td>
+          <td class="text-right">{{settleInfo.p_wage_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.p_part_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.p_other_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.stat_p_after | moneyDefault}}</td>
+        </tr>
+        <tr>
+          <td>合计</td>
+          <td class="text-right">{{settleInfo.stat_wage_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.stat_part_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.stat_other_after | moneyDefault}}</td>
+          <td class="text-right">{{settleInfo.stat_after | moneyDefault}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-12-6-3 settlement">
+      <table class="table table-bordered table-condensed table-striped">
+        <tr>
+          <th colspan=2 class="text-center">客账收银信息</th>
+        </tr>
+        <tr>
+          <td>现金</td>
+          <td class="text-right">{{main.cash | moneyDefault}}</td>
+        </tr>
+        <tr>
+          <td>支票</td>
+          <td class="text-right">{{main.cheque | moneyDefault}}</td>
+        </tr>
+        <tr>
+          <td>刷卡</td>
+          <td class="text-right">{{main.card | moneyDefault}}</td>
+        </tr>
+        <tr>
+          <td>代金券</td>
+          <td class="text-right">{{main.voucher | moneyDefault}}</td>
+        </tr>
+        <tr>
+          <td>当时挂账</td>
+          <td class="text-right">{{main.sign_bill | moneyDefault}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</form>

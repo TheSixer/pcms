@@ -1,0 +1,63 @@
+<mb-modal-header title="销售机会编辑" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+<div class="modal-body body-sm" cg-busy="promise">
+  <form class="form-horizontal" name="form" role="form">
+    <div class="form-group">
+      <div class="col-12-6-6">
+        <input-combo type="text" title="机会编号" idname="chanceId" ng-model="chanceData.chanceId" ng-required="true" ng-disabled="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="机会来源" idname="chanceOrigin" ng-model="chanceData.chanceOrigin" ng-required="true" ng-disabled="true" source-data="codeMaster.clueOrigin"></input-combo>
+      </div>
+      <!--<div class="col-12-6-6">-->
+        <!--<input-combo type="text" title="经销商ID" idname="dealerId" ng-model="chanceData.dealerId" ng-required="true"></input-combo>-->
+      <!--</div>-->
+      <div class="col-12-6-6">
+        <input-combo type="select" title="业务类别" idname="businessType" ng-model="chanceData.businessType" ng-required="true" source-data="codeMaster.businessType"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="机会状态" idname="chanceStatus" ng-model="chanceData.chanceStatus"  ng-required="true" source-data="codeMaster.chanceStatus"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="机会级别" idname="chanceLevel" ng-model="chanceData.chanceLevel" ng-required="true" source-data="codeMaster.clueLevel"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="客户姓名" idname="customerName"
+                     ng-model="chanceData.customerName" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="性别" idname="sex" ng-model="chanceData.sex" ng-required="true" source-data="codeMaster.sex"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="移动电话" idname="phone" ng-model="chanceData.phone" ng-pattern="pattern.mobile1" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="区" idname="area" ng-model="chanceData.area" ng-required="true" source-data="area"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="省份" idname="province" ng-model="chanceData.province" source-data="province" ng-required="true" ng-disabled="provinceMode"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="城市" idname="city" ng-model="chanceData.city" source-data="city" ng-required="true" ng-disabled="cityMode"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="目标车型" idname="intentionModel" ng-model="chanceData.intentionModel" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="装备" idname="carSetup" ng-model="chanceData.carSetup" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="颜色" idname="carColor" ng-model="chanceData.wq" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="目标车型关注度" idname="modelAttention" ng-model="chanceData.modelAttention" ng-required="true" source-data="codeMaster.modelAttention"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="目标车型备注" idname="intentionDetail" ng-model="chanceData.intentionDetail" ng-required="true"></input-combo>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+  <button class="btn btn-sm btn-primary" ng-click="ok()" ng-disabled="form.$invalid">确定</button>
+</div>

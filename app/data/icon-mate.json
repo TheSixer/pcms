@@ -1,0 +1,31 @@
+{
+  "iconMatrix": {
+    "Moofun管理": "fa fa-cube fa-fw",
+    "线索管理": "fa fa-id-card-o fa-fw",
+    "客户跟进": "fa fa-handshake-o fa-fw",
+    "系统管理": "fa fa-cog fa-fw",
+    "客户资料管理": "fa fa-files-o fa-fw",
+    "其他": "fa fa-bookmark fa-fw",
+    "用户管理": "fa fa-users fa-fw",
+    "销售计划": "fa fa-line-chart fa-fw",
+    "发车管理": "fa fa-car fa-fw",
+    "客户管理": "fa fa-user fa-fw",
+    "采购管理": "fa fa-cart-arrow-down fa-fw",
+    "销售管理": "fa fa-shopping-bag fa-fw",
+    "库存管理": "fa fa-building-o fa-fw",
+    "预约管理": "fa fa-clock-o fa-fw",
+    "前台管理": "fa fa-desktop fa-fw",
+    "车间管理": "fa fa-car fa-fw",
+    "理赔保养": "fa fa-shield fa-fw",
+    "顾客关系": "fa fa-users fa-fw",
+    "财务管理": "fa fa-jpy fa-fw",
+    "基本资料": "fa fa-briefcase fa-fw",
+    "预约业务查询": "fa fa-clock-o fa-rotate-90 fa-fw",
+    "前台业务查询": "fa fa-desktop fa-fw",
+    "车间业务查询": "fa fa-car fa-fw",
+    "PDI业务查询": "fa fa-product-hunt fa-fw",
+    "业务查询": "fa fa-search fa-fw",
+    "统计分析": "fa fa-bar-chart fa-fw",
+    "default": "fa fa-bars fa-fw"
+  }
+}

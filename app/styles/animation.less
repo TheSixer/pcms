@@ -1,0 +1,40 @@
+.btn-jump {
+  position: relative;
+    -webkit-animation-name: jumpButton; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: jumpButton;
+    animation-duration: 4s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes jumpButton {
+    0%   {left:0px; top:0px;}
+    25%  {left:0px; top:-15px;}
+    50%  {left:0px; top:0px;}
+    75%  {left:0px; top:-10px;}
+    100% {left:0px; top:0px;}
+}
+/* Standard syntax */
+@keyframes jumpButton {
+  0%   {left:0px; top:0px;}
+  25%  {left:0px; top:-15px;}
+  50%  {left:0px; top:0px;}
+  75%  {left:0px; top:-10px;}
+  100% {left:0px; top:0px;}
+}
+.move-right {
+  position: relative;
+    -webkit-animation-name: leftToRight; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 5s; /* Chrome, Safari, Opera */
+    animation-name: leftToRight;
+    animation-duration: 5s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes leftToRight {
+    0%   {left:-120px; top:0px;}
+    100% {left:120px; top:0px;}
+}
+/* Standard syntax */
+@keyframes leftToRight {
+  0%   {left:-120px; top:0px;}
+  100% {left:120px; top:0px;}
+}

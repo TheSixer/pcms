@@ -1,0 +1,33 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="searchBtnEvent()">查询</button>
+      <button type="button" class="btn btn-default" ng-click="exportBtnEvent()">导出</button>
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="date" title="起始时间" idname="beginTime" ng-model="filter.beginTime" err-msg="请按照指定格式输入时间。例如:2016-01-01 12:00:00" output-format="'yyyy-MM-dd HH:mm:ss'"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="date" title="截止时间" idname="endTime" ng-model="filter.endTime" err-msg="请按照指定格式输入时间。例如:2016-01-01 12:00:00" output-format="'yyyy-MM-dd HH:mm:ss'"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="区域" idname="area" ng-model="filter.area" source-data="area"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="省份" idname="province" ng-model="filter.province" source-data="province" ng-disabled="provinceMode"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="城市" idname="city" ng-model="filter.city" source-data="city" ng-disabled="cityMode"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="4S店" idname="dealer" ng-model="filter.dealer" source-data="dealer" ng-disabled="dealerMode"></input-combo>
+      </div>
+    </div>
+  </form>
+  <div id="mainGrid" ui-grid="hybridObj.gridOptions" class="gridCommon gridRow10" ui-grid-selection
+       ui-grid-resize-columns ui-grid-pagination ui-grid-auto-resize>
+  </div>
+</div>

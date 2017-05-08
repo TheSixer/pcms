@@ -1,0 +1,26 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="searchBtnEvent()">查询</button>
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="date" title="起始时间" idname="startDate" ng-model="filter.startDate" err-msg="请按照指定格式输入时间。例如:2016-01-01"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="date" title="截止时间" idname="endDate" ng-model="filter.endDate" err-msg="请按照指定格式输入时间。例如:2016-01-01"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="text" title="用户名" idname="customerNm" ng-model="filter.customerNm"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="email" title="邮箱" idname="email" ng-model="filter.email"></input-combo>
+      </div>
+    </div>
+  </form>
+  <div id="mainGrid" ui-grid="hybridObj.gridOptions" class="gridCommon gridRow10" ui-grid-selection
+       ui-grid-resize-columns ui-grid-pagination ui-grid-auto-resize>
+  </div>
+</div>

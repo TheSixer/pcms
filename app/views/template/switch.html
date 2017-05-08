@@ -1,0 +1,21 @@
+<label class="control-label {{labelClass? labelClass : 'col-xs-4'}}" ng-if="!noLabel" ng-class="{ 'highlight': ngRequired }" for="{{idname}}">
+  <span class="symbol" ng-class="{'required': ngRequired, 'ok': ngRequired && form.$valid}"></span>{{title}}
+</label>
+<div class="{{inputClass ? inputClass : 'col-xs-8'}}" ng-class="{ 'has-error': form.$invalid && !ngDisabled }">
+  <input
+    bs-switch
+    id="{{idname}}"
+    name="{{idname}}"
+    type="checkbox"
+    ng-model="ngModel"
+    switch-active="{{!ngDisabled}}"
+    switch-on-text="是"
+    switch-off-text="否"
+    switch-size='mini'
+    switch-animate="false"
+    switch-on-color="success"
+    switch-off-color="default"
+    uib-tooltip="{{errMsg}}"
+    tooltip-enable="form.$invalid"
+    tooltip-animation="false">
+</div>

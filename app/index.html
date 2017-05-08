@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+  <meta charset="utf-8">
+  <title>海马汽车</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css" />
+  <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+  <link rel="stylesheet" href="bower_components/angular-busy/dist/angular-busy.css" />
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/app.css">
+  <link rel="stylesheet" href="styles/bootstrap-select.min.css">
+  <!-- endbuild -->
+</head>
+
+<body ng-app="pcmsApp" class="h-full" ng-class="bodyClass" ng-cloak>
+  <div class="div-notification">
+    <uib-alert dismiss-on-timeout=7000 ng-repeat="alert in systemAlert" type="{{alert.type}}" close="systemAlert.splice($index,1)">
+      <span ng-bind="alert.code | translate:alert.param"></span>
+    </uib-alert>
+  </div>
+  <!-- 页面加载动画 -->
+  <div style="text-align: center;" id="pageloadding">
+    <h3 style="color:#4A4A4A;">页面加载中，请稍候。。。</h3>
+    <img style="width:10%" src="images/loading.gif" />
+  </div>
+  <div class="h-full pos-rlt" ui-view onclick="void(0)"></div>
+  </div>
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-md5/angular-md5.js"></script>
+  <script src="bower_components/angular-ui-select/dist/select.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.js"></script>
+  <script src="bower_components/angular-i18n/angular-locale_zh-cn.js"></script>
+  <script src="bower_components/ngUpload/ng-upload.js"></script>
+  <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/lodash/lodash.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+  <script src="bower_components/angular-busy/dist/angular-busy.js"></script>
+  <script src="bower_components/angular-promise-buttons/dist/angular-promise-buttons.js"></script>
+  <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+  <script src="bower_components/echarts/dist/echarts.js"></script>
+  <script src="bower_components/echarts/map/js/china.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <!--SCRIPTS-->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/app-route.js"></script>
+  <script src="scripts/string-extra.js"></script>
+  <script src="scripts/components/bootstrap-select.min.js"></script>
+  <script src="scripts/components/bootstrap-switch.js"></script>
+  <script src="scripts/components/common-grid-operate.js"></script>
+  <script src="scripts/components/common-modal-search.js"></script>
+  <script src="scripts/components/components.js"></script>
+  <script src="scripts/components/config.js"></script>
+  <script src="scripts/components/confirm.js"></script>
+  <script src="scripts/components/directive.js"></script>
+  <script src="scripts/components/filter.js"></script>
+  <script src="scripts/components/hybrid-ui-grid.js"></script>
+  <script src="scripts/components/jquery.tags.min.js"></script>
+  <script src="scripts/components/translate.js"></script>
+  <script src="scripts/controllers/index/change-password.js"></script>
+  <script src="scripts/controllers/index/login.js"></script>
+  <script src="scripts/controllers/index/query.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/pcms/analysis/24hours-handle-rate.js"></script>
+  <script src="scripts/controllers/pcms/analysis/KPI-index-reference.js"></script>
+  <script src="scripts/controllers/pcms/analysis/arrive-rate-hq.js"></script>
+  <script src="scripts/controllers/pcms/analysis/arrive-rate.js"></script>
+  <script src="scripts/controllers/pcms/analysis/car-model.js"></script>
+  <script src="scripts/controllers/pcms/analysis/clue-analysis-hq.js"></script>
+  <script src="scripts/controllers/pcms/analysis/clue-analysis.js"></script>
+  <script src="scripts/controllers/pcms/analysis/clue-lbr-hq.js"></script>
+  <script src="scripts/controllers/pcms/analysis/clue-lbr.js"></script>
+  <script src="scripts/controllers/pcms/analysis/customer-come.js"></script>
+  <script src="scripts/controllers/pcms/analysis/customer-comment.js"></script>
+  <script src="scripts/controllers/pcms/analysis/customer-login.js"></script>
+  <script src="scripts/controllers/pcms/analysis/customer-reception.js"></script>
+  <script src="scripts/controllers/pcms/analysis/customer-returned.js"></script>
+  <script src="scripts/controllers/pcms/analysis/intention-feedback-rate.js"></script>
+  <script src="scripts/controllers/pcms/analysis/operation-4s.js"></script>
+  <script src="scripts/controllers/pcms/analysis/operation-area.js"></script>
+  <script src="scripts/controllers/pcms/analysis/operation-platform.js"></script>
+  <script src="scripts/controllers/pcms/analysis/order-feedback-rate.js"></script>
+  <script src="scripts/controllers/pcms/analysis/sales-consultant-conversion-rate.js"></script>
+  <script src="scripts/controllers/pcms/analysis/sales-cross-car-summary.js"></script>
+  <script src="scripts/controllers/pcms/analysis/sales-order.js"></script>
+  <script src="scripts/controllers/pcms/analysis/sales-twice-order.js"></script>
+  <script src="scripts/controllers/pcms/analysis/track-defeat-hq.js"></script>
+  <script src="scripts/controllers/pcms/analysis/track-defeat.js"></script>
+  <script src="scripts/controllers/pcms/analysis/track-feedback-rate.js"></script>
+  <script src="scripts/controllers/pcms/base/base-list-ctrl.js"></script>
+  <script src="scripts/controllers/pcms/clue/clue-4s-assign.js"></script>
+  <script src="scripts/controllers/pcms/clue/clue-4s-manage.js"></script>
+  <script src="scripts/controllers/pcms/clue/clue-assign.js"></script>
+  <script src="scripts/controllers/pcms/clue/clue-audit.js"></script>
+  <script src="scripts/controllers/pcms/clue/clue-duplicate.js"></script>
+  <script src="scripts/controllers/pcms/clue/clue-manage.js"></script>
+  <script src="scripts/controllers/pcms/modal/4s-assign-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/assign-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/clue-manage-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/dividend-rule-mng-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/import-if-mng-model.js"></script>
+  <script src="scripts/controllers/pcms/modal/import-times-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/label-mng-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/opportunity-level-setting-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/personal-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/potential-customer-query-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/sale-activity-customer-tag-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/sale-activity-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/sale-chance-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/sale-chance-transmit-modal.js"></script>
+  <script src="scripts/controllers/pcms/modal/to-order-model.js"></script>
+  <script src="scripts/controllers/pcms/modal/wash-rule-mng-modal.js"></script>
+  <script src="scripts/controllers/pcms/system/dividend-rule-mng.js"></script>
+  <script src="scripts/controllers/pcms/system/import-if-mng.js"></script>
+  <script src="scripts/controllers/pcms/system/import-times-mng.js"></script>
+  <script src="scripts/controllers/pcms/system/label-mng.js"></script>
+  <script src="scripts/controllers/pcms/system/opportunity-level-setting.js"></script>
+  <script src="scripts/controllers/pcms/system/wash-rule-mng.js"></script>
+  <script src="scripts/controllers/pcms/track/potential-customer.js"></script>
+  <script src="scripts/controllers/pcms/track/sale-activity.js"></script>
+  <script src="scripts/controllers/pcms/track/sale-chance-sales.js"></script>
+  <script src="scripts/controllers/pcms/track/sale-chance.js"></script>
+  <script src="scripts/controllers/welcome.js"></script>
+  <script src="scripts/service/auth.js"></script>
+  <script src="scripts/service/index-api.js"></script>
+  <script src="scripts/service/pcms-api.js"></script>
+  <script src="scripts/service/pcms/analysis-api.js"></script>
+  <script src="scripts/service/pcms/clue-4s-api.js"></script>
+  <script src="scripts/service/pcms/clue-api.js"></script>
+  <script src="scripts/service/pcms/system-api.js"></script>
+  <script src="scripts/service/pcms/track-api.js"></script>
+  <script src="scripts/service/services.js"></script>
+  <script src="scripts/service/util.js"></script>
+  <!--SCRIPTS END-->
+  <!-- endbuild -->
+  <!-- 页面加载动画 -->
+  <script>
+  document.body.removeChild(document.getElementById("pageloadding"));
+  </script>
+</body>
+
+</html>

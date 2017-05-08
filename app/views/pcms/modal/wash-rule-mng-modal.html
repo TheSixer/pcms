@@ -1,0 +1,23 @@
+<mb-modal-header title="规则编辑" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+<div class="modal-body body-sm" cg-busy="promise">
+  <form class="form-horizontal" name="form" role="form">
+    <div class="form-group">
+      <div class="col-12-11-11">
+        <input-combo type="select" title="类别" idname="nam" ng-model="ruleData.nam" source-data="codeMaster.ruleType" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-11-11">
+        <input-combo type="select" title="关键字" idname="key" ng-model="ruleData.key" ng-required="true" source-data="codeMaster.ruleKey" options="obj.value as obj.value for obj in sourceData"></input-combo>
+      </div>
+      <div class="col-12-11-11">
+        <input-combo type="text" title="值" idname="value" ng-model="ruleData.value" ng-disabled="viewMode" ng-required="!viewMode"></input-combo>
+      </div>
+      <div class="col-12-11-11">
+        <input-combo type="text" title="备注" idname="remark" ng-model="ruleData.remark"></input-combo>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+  <button class="btn btn-sm btn-primary" ng-click="ok()" ng-disabled="form.$invalid">确定</button>
+</div>

@@ -1,0 +1,11 @@
+<label class="control-label {{labelClass? labelClass : 'col-xs-4'}}" for="{{idname}}">
+   <span class="symbol" ng-class="{'required': ngRequired, 'ok': ngRequired && form.$valid}"></span>{{title}}
+</label>
+<div class="{{inputClass ? inputClass : 'col-xs-8'}} input-group">
+  <input class="form-control" id="{{idname}}" name="{{idname}}" type="text" ng-model="ngModel.value" ng-disabled="ngDisabled"/>
+  <div class="input-group-btn">
+    <button class="btn btn-default" ng-click="openModal()">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+</div>

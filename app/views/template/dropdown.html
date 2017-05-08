@@ -1,0 +1,38 @@
+<label class="control-label {{labelClass? labelClass : 'col-xs-4'}}" ng-if="!noLabel" ng-class="{ 'highlight': ngRequired }" for="{{idname}}">
+   <span class="symbol" ng-class="{'required': ngRequired, 'ok': ngRequired && form.$valid}"></span>{{title}}
+</label>
+<div class="{{inputClass ? inputClass : 'col-xs-8'}}" ng-class="{ 'has-error': form.$invalid && !ngDisabled }">
+  <div class="dropdown" ng-class="{'open': !ngDisabled && isShowDropdown}">
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        id="{{idname}}"
+        name="{{idname}}"
+        placeholder="{{placeholder}}"
+        onkeyup="if(event.keyCode===9)this.click();"
+        autocomplete="off"
+        ng-model="ngModel"
+        ng-disabled="ngDisabled"
+        ng-required="ngRequired"
+        ng-pattern="ngPattern"
+        ng-click="toggleDropDown()"
+        uib-tooltip="{{errMsg}}"
+        tooltip-enable="form.$invalid"
+        tooltip-animation="false"/>
+      <div class="input-group-btn">
+        <button class="btn btn-default" ng-click="toggleDropDown()" ng-disabled="ngDisabled">
+          <i class="fa fa-angle-down"></i>
+        </button>
+      </div>
+    </div>
+    <p></p>
+    <ul class="dropdown-menu">
+      <li role="menuitem" ng-repeat="item in sourceData | filter:ngModel">
+        <a href="" ng-click="dropdownSelect(item)">
+          {{item}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

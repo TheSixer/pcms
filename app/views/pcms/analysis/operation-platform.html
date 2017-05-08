@@ -1,0 +1,21 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="searchBtnEvent()">查询</button>
+      <button type="button" class="btn btn-default" ng-click="exportBtnEvent()">导出</button>
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="date" title="起始时间" idname="bgnTim" ng-model="filter.bgnTim" err-msg="请按照指定格式输入时间。例如:2016-01-01 12:00:00" output-format="'yyyy-MM-dd HH:mm:ss'"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="date" title="截止时间" idname="endTim" ng-model="filter.endTim" err-msg="请按照指定格式输入时间。例如:2016-01-01 12:00:00" output-format="'yyyy-MM-dd HH:mm:ss'"></input-combo>
+      </div>
+    </div>
+  </form>
+  <div id="mainGrid" ui-grid="hybridObj.gridOptions" class="gridCommon gridRow10" ui-grid-selection
+       ui-grid-resize-columns ui-grid-pagination ui-grid-auto-resize>
+  </div>
+</div>

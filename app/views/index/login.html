@@ -1,0 +1,40 @@
+<div class="main-login">
+  <div class="logo">
+    <img src="images/logo2.png" class="img-responsive center-block" alt="haima"><br>
+  </div>
+  <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+    <div class="box-login">
+      <h3 class="text-center m-b-md">登 录</h3>
+      <form class="form-horizontal" name="form" ng-submit="login()" role="form">
+        <div class="form-group">
+          <label for="username" class="sr-only">用户名</label>
+          <div class="col-xs-12">
+            <span class="fa fa-user input-info-icon" aria-hidden="true"></span>
+            <input type="text" name="username" id="username" placeholder="用户名" class="form-control padder-lg" ng-model="username" required uib-tooltip="用户名不能为空。" tooltip-enable="form.username.$invalid" tooltip-placement="bottom-left" auto-fill-sync/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="sr-only">密码</label>
+          <div class="col-xs-12">
+            <span class="fa fa-lock input-info-icon" aria-hidden="true"></span>
+            <input type="password" name="password" id="password" placeholder="密码" class="form-control padder-lg" ng-model="password" required uib-tooltip="密码不能为空。" tooltip-enable="form.password.$invalid" tooltip-placement="bottom-left" auto-fill-sunc/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <p>请输入正确的用户名和密码登录本系统，如有遗失用户名或密码请与管理员联系。</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-8 col-xs-offset-2">
+            <button type="submit" ng-disabled="form.$invalid" class="btn btn-login" promise-btn="promise">登录</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="copyright">
+      <p>海马汽车有限公司 河南省郑州市航海东路第十七大街1689号</p>
+      <p>电话：0371-67399591,0371-67399059</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<label class="control-label {{labelClass? labelClass : 'col-xs-4'}}" ng-if="!noLabel" ng-class="{ 'highlight': ngRequired }" for="{{idname}}">
+   <span class="symbol" ng-class="{'required': ngRequired, 'ok': ngRequired && form.$valid}"></span>{{title}}
+</label>
+<div class="{{inputClass ? inputClass : 'col-xs-8'}}" ng-class="{ 'has-error': form.$invalid && !ngDisabled }">
+  <p class="input-group"><input
+    type="text"
+    class="form-control"
+    id="{{idname}}"
+    name="{{idname}}"
+    uib-datepicker-popup="{{outputFormat ? outputFormat : 'yyyy-MM-dd'}}"
+    alt-input-formats="['yyyy-M!-d!']"
+    placeholder="{{placeholder}}"
+    ng-model="ngModel"
+    ng-disabled="ngDisabled"
+    ng-required="ngRequired"
+    is-open="opened"
+    uib-tooltip="{{errMsg}}"
+    tooltip-enable="form.$invalid"
+    tooltip-animation="false"
+    clear-text="重置"
+    current-text="今天"
+    close-text="关闭"/>
+    <span class="input-group-btn">
+      <button type="button" class="btn btn-default" ng-click="opened=true" ng-disabled="ngDisabled">
+        <i class="fa fa-calendar"></i>
+      </button>
+    </span>
+  </p>
+</div>

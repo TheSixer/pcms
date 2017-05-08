@@ -1,0 +1,135 @@
+<mb-modal-header title="线索编辑" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+<div class="modal-body body-sm" cg-busy="promise">
+  <form class="form-horizontal" name="form" role="form">
+    <div class="form-group">
+      <div class="col-12-6-6">
+        <input-combo type="text" title="线索编号" idname="clueId" ng-model="clueData.clueId" ng-required="false" ng-disabled="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <!--<input-combo type="select" title="来源平台" idname="clueOrigin" ng-model="clueData.clueOrigin" ng-required="true" ng-disabled="true" source-data="codeMaster.clueOrigin"></input-combo>-->
+        <input-combo type="text" title="来源平台" idname="clueOrigin" ng-model="clueData.clueOrigin" ng-required="true" ng-disabled="true"></input-combo>
+      </div>
+      <!--<div class="col-12-6-6">-->
+        <!--<input-combo type="text" title="来源店铺" idname="dealerNm" ng-model="clueData.dealerNm" ng-required="true" ng-disabled="true"></input-combo>-->
+      <!--</div>-->
+      <div class="col-12-6-6">
+        <input-combo type="select" title="业务类别" idname="businessType" ng-model="clueData.businessType" ng-required="true" source-data="codeMaster.businessType"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="线索状态" idname="clueStatus" ng-model="clueData.clueStatus"  ng-required="true" source-data="codeMaster.clueStatus"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="线索级别" idname="clueLevel" ng-model="clueData.clueLevel" ng-required="true" source-data="codeMaster.clueLevel" options="obj.value as obj.value for obj in sourceData"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="客户姓名" idname="customerName"
+                     ng-model="clueData.customerName" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="性别" idname="sex" ng-model="clueData.sex" ng-required="true" source-data="codeMaster.sex" options="obj.value as obj.value for obj in sourceData"></input-combo>
+        <!--<input-combo type="text" title="性别" idname="sex" ng-model="clueData.sex" ng-required="true" source-data="codeMaster.sex"></input-combo>-->
+        <!--<select class="form-control" id="sex" ng-model="clueData.sex" ng-options="obj.value for obj in codeMaster.sex"></select>-->
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="年龄" idname="age" ng-model="clueData.age"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="移动电话" idname="phone" ng-model="clueData.phone" ng-pattern="pattern.mobile1" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="办公电话" idname="companyPhone" ng-model="clueData.companyPhone" ng-pattern="pattern.tel"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="家庭电话" idname="familyPhone" ng-model="clueData.familyPhone" ng-pattern="pattern.tel"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="地址" idname="address" ng-model="clueData.address" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="邮编" idname="zipcode" ng-model="clueData.zipcode" ng-pattern="pattern.zipcode"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <!--<input-combo type="select" title="省份" idname="province" ng-model="clueData.province" ng-required="true"-->
+                     <!--source-data="codeMaster.province"></input-combo>-->
+        <input-combo type="text" title="省份" idname="province" ng-model="clueData.province" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <!--<input-combo type="select" title="城市" idname="city" ng-model="clueData.city" ng-required="true"-->
+                     <!--source-data="codeMaster.city"></input-combo>-->
+        <input-combo type="text" title="城市" idname="city" ng-model="clueData.city" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <!--<input-combo type="select" title="区" idname="district" ng-model="clueData.district" ng-required="true" source-data="codeMaster.area"></input-combo>-->
+        <input-combo type="text" title="区" idname="district" ng-model="clueData.district" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="区域" idname="area" ng-model="clueData.area" ng-required="true" source-data="codeMaster.area" options="obj.value as obj.value for obj in sourceData"></input-combo>
+        <!--<input-combo type="text" title="区域" idname="area" ng-model="clueData.area" ng-required="true"></input-combo>-->
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="职业" idname="occupation" ng-model="clueData.occupation"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="身份证号" idname="idNo" ng-model="clueData.idNo" ng-pattern="pattern.idCard"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="电子邮件" idname="email" ng-model="clueData.email" ng-pattern="pattern.email"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="微信" idname="weixin" ng-model="clueData.weixin"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="微博" idname="weibo" ng-model="clueData.weibo"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="意向车型" idname="modelName" ng-model="clueData.modelName" ng-required="true" source-data="codeMaster.intentionModel" options="obj.value as obj.value for obj in sourceData"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="意向车型关注度" idname="modelAttention" ng-model="clueData.modelAttention" ng-required="true" source-data="codeMaster.modelAttention" options="obj.value as obj.value for obj in sourceData"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="意向型号" idname="modelDetail" ng-model="clueData.modelDetail" ng-required="true" source-data="codeMaster.modelDetail" options="obj.value as obj.value for obj in sourceData"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="意向车型备注" idname="modelComment" ng-model="clueData.modelComment" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="date" title="预计购车时间" idname="preBuycarDate" ng-model="clueData.preBuycarDate"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="date" title="预计到店时间" idname="preArriveDate" ng-model="clueData.preArriveDate"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="购车预算" idname="carBudget" ng-model="clueData.carBudget" ng-pattern="pattern.number"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="购车用途" idname="carUse" ng-model="clueData.carUse"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="对比车型" idname="rivalCar" ng-model="clueData.rivalCar"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="信息来源" idname="infoOrigin" ng-model="clueData.infoOrigin" source-data="codeMaster.infoOrigin" options="obj.value as obj.value for obj in sourceData"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="备注" idname="comment" ng-model="clueData.comment"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="来源活动" idname="eventOrigin" ng-model="clueData.eventOrigin"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="活动类别" idname="eventType" ng-model="clueData.eventType"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="活动金额" idname="eventMoney" ng-model="clueData.eventMoney" ng-pattern="pattern.number"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="活动验证码" idname="eventCaptcha" ng-model="clueData.eventCaptcha"></input-combo>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+  <button class="btn btn-sm btn-primary" ng-click="ok()" ng-disabled="form.$invalid">确定</button>
+</div>

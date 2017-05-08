@@ -1,0 +1,78 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="query()">查询</button>
+      <button type="button" class="btn btn-default" >审核</button>
+      <!--<button type="button" class="btn btn-default" >编辑</button>-->
+      <!--<button type="button" class="btn btn-default" >订单线索</button>-->
+      <!--<button type="button" class="btn btn-default" >导入线索</button>-->
+      <!--<button type="button" class="btn btn-default" >模板下载</button>-->
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="select" title="机会类别" idname="type" ng-model="filter.clueType" source-data="codeMaster.clueType"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="机会状态" idname="status" ng-model="filter.clueStatus" source-data="codeMaster.clueStatus"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="text" title="机会编号" idname="name" ng-model="filter.name"></input-combo>
+      </div>
+    </div>
+  </form>
+  <div class="mb-grid">
+    <div class="div-grid-lg">
+      <table class="table table-bordered table-condensed table-striped table-has-header">
+        <tr>
+          <th><input id="chkSelectAll" type="checkbox" ng-click="selectAll()"/></th>
+          <th>序号</th>
+          <th>机会编号</th>
+          <th>机会类别</th>
+          <th>来源平台</th>
+          <th>来源店铺</th>
+          <th>机会状态</th>
+          <th>机会级别</th>
+          <th>客户姓名</th>
+          <th>性别</th>
+          <th>手机</th>
+          <th>省份</th>
+          <th>城市</th>
+          <th>区域</th>
+          <th>意向车型</th>
+          <th>意向型号</th>
+          <th>意向车型备注</th>
+          <th>来源活动</th>
+          <th>活动类别</th>
+          <th>金额</th>
+          <th>活动验证码</th>
+        </tr>
+        <tr ng-repeat="row in grid.rows track by $index" ng-class="{'info':row.selected}" ng-click="selectRow($index)" ng-dblclick="ok()">
+          <td><input type="checkbox" ng-model="row.isChecked" /></td>
+          <td class="text-right">{{row.no}}</td>
+          <td>{{row.clueID}}</td>
+          <td>{{row.clueGenre}}</td>
+          <td>{{row.clueTerrace}}</td>
+          <td>{{row.storeNm}}</td>
+          <td>{{row.clueStatus}}</td>
+          <td>{{row.clueLevel}}</td>
+          <td>{{row.customerNm}}</td>
+          <td>{{row.clueSex}}</td>
+          <td>{{row.mobilePhone}}</td>
+          <td>{{row.province}}</td>
+          <td>{{roe.city}}</td>
+          <td>{{row.clueArea}}</td>
+          <td>{{row.clueCar}}</td>
+          <td>{{row.clueModel}}</td>
+          <td>{{row.clueRemark}}</td>
+          <td>{{row.clueActivity}}</td>
+          <td>{{row.activityType}}</td>
+          <td>{{row.clueMoney}}</td>
+          <td>{{row.clueCode}}</td>
+        </tr>
+      </table>
+    </div>
+    <mb-pager></mb-pager>
+  </div>
+</div>

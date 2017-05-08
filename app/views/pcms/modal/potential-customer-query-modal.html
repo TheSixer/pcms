@@ -1,0 +1,64 @@
+<mb-modal-header title="潜客数据编辑" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+<div class="modal-body body-sm" cg-busy="promise">
+  <form class="form-horizontal" name="form" role="form">
+    <div class="form-group">
+      <div class="col-12-6-6">
+        <input-combo type="text" title="姓名" idname="filter_customerName" ng-model="filter.customerName" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="性别" idname="filter_sex" ng-model="filter.sex" ng-required="true" source-data="codeMaster.sex"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="date" title="出生年月" idname="filter_birthday" ng-model="filter.birthday"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="证件类型" idname="filter_idType" ng-model="filter.idType"
+                     source-data="codeMaster.idType"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="证件编号" idname="filter_id_no" ng-model="filter.idNo" ng-pattern="pattern.idCard"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="电话" idname="filter_phone" ng-model="filter.phone" ng-pattern="pattern.mobile1" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="职业" idname="filter_occupation" ng-model="filter.occupation"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="公司电话" idname="filter_company_phone"
+                     ng-model="filter.companyPhone" ng-pattern="pattern.tel"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="家庭电话" idname="filter_family_phone" ng-model="filter.familyPhone" ng-pattern="pattern.tel"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="电子邮件" idname="filter_email" ng-model="filter.email" ng-pattern="pattern.email"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="微信" idname="filter_weixin" ng-model="filter.weixin"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="微博" idname="filter_weibo" ng-model="filter.weibo"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="区域" idname="filter_area" ng-model="filter.area" ng-required="true" source-data="area"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="省份" idname="filter_province" ng-model="filter.province" ng-required="true" source-data="province" ng-disabled="provinceMode"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="城市" idname="filter_city" ng-model="filter.city" ng-required="true" source-data="city" ng-disabled="cityMode"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="住址" idname="filter_address" ng-model="filter.address" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="邮编" idname="filter_zipcode" ng-model="filter.zipcode" ng-pattern="pattern.zipcode"></input-combo>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+  <button class="btn btn-sm btn-primary" ng-click="ok()" ng-disabled="form.$invalid">确定</button>
+</div>

@@ -1,0 +1,23 @@
+<div>
+  <mb-modal-header title="客户画像" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+  <div class="modal-body body-sm" cg-busy="promise">
+
+    <div class="col-md-4">
+      <img src="./././images/female-head-logo-m.png" alt="客户画像" class="img-responsive img-rounded" ng-if="!modeView">
+      <img src="./././images/male-head-logo-m.png" alt="客户画像" class="img-responsive img-rounded" ng-if="modeView">
+    </div>
+    <div class="col-md-8">
+      <div class="m-b-sm persona-title">
+          <i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>
+          <span>姓名：{{customerData.customerName}}</span>
+          <span>年龄：{{customerData.age}}</span>
+      </div>
+      <div class="col-md-4" ng-repeat="label in labels">
+        <div class="text-muted div-user-label bg-style-1">
+          <span>{{label.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer"></div>
+</div>

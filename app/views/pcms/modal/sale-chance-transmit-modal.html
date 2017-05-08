@@ -1,0 +1,32 @@
+<div>
+  <mb-modal-header title="销售顾问一览" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+  <div class="modal-body body-sm">
+    <form class="form-horizontal" name="Form" id="Form" ng-submit="searchBtnEvent()">
+      <div class="form-group">
+        <div class="col-12-6-3">
+          <input-combo type="text" title="工号" idname="workNum" ng-model="filter.workNum"></input-combo>
+        </div>
+        <div class="col-12-6-3">
+          <input-combo type="text" title="姓名" idname="name" ng-model="filter.name"></input-combo>
+        </div>
+        <div class="col-12-6-3">
+          <input-combo type="text" title="手机" idname="phone" ng-model="filter.phone"></input-combo>
+        </div>
+        <div class="col-12-6-3">
+          <div class="col-xs-1">
+          </div>
+          <div class="col-xs-1">
+            <button type="submit" class="btn btn-info btn-sm">查询</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div id="mainGrid" ui-grid="hybridObj.gridOptions" class="gridCommon gridRow10" ui-grid-selection
+         ui-grid-resize-columns ui-grid-pagination ui-grid-auto-resize>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+    <button class="btn btn-sm btn-primary" ng-click="ok()">确定</button>
+  </div>
+</div>

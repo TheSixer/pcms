@@ -1,0 +1,45 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="searchBtnEvent()">查询</button>
+      <button type="button" class="btn btn-default" ng-click="exportBtnEvent()">导出</button>
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="date" title="起始时间" idname="beginTime" ng-model="filter.beginTime" err-msg="请按照指定格式输入时间。例如:2016-01-01 12:00:00" output-format="'yyyy-MM-dd HH:mm:ss'"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="date" title="截止时间" idname="endTime" ng-model="filter.endTime" err-msg="请按照指定格式输入时间。例如:2016-01-01 12:00:00" output-format="'yyyy-MM-dd HH:mm:ss'"></input-combo>
+      </div>
+      <!--<div class="col-12-6-3">-->
+      <!--<input-combo type="select" title="意向车型" idname="modelName" ng-model="filter.modelName" source-data="codeMaster.modelName"></input-combo>-->
+      <!--</div>-->
+      <!--<div class="col-12-6-3">-->
+      <!--<input-combo type="select" title="来源平台" idname="clueOrigin" ng-model="filter.clueOrigin" source-data="codeMaster.clueOrigin"></input-combo>-->
+      <!--</div>-->
+      <!--<div class="col-12-6-3">-->
+      <!--<input-combo type="select" title="来源店铺" idname="dealerNm" ng-model="filter.dealerNm" source-data="codeMaster.dealerNm"></input-combo>-->
+      <!--</div>-->
+      <!--<div class="col-12-6-3">-->
+      <!--<input-combo type="select" title="区域" idname="area" ng-model="filter.area" source-data="codeMaster.area"></input-combo>-->
+      <!--</div>-->
+      <!--<div class="col-12-6-3">-->
+      <!--<input-combo type="select" title="省份" idname="province" ng-model="filter.province" source-data="codeMaster.province"></input-combo>-->
+      <!--</div>-->
+      <!--<div class="col-12-6-3">-->
+      <!--<input-combo type="select" title="城市" idname="city" ng-model="filter.city" source-data="codeMaster.city"></input-combo>-->
+      <!--</div>-->
+      <!--<div class="col-12-6-3">-->
+      <!--<input-combo type="select" title="4S店" idname="activityType" ng-model="filter.activityType" source-data="codeMaster.activityType"></input-combo>-->
+      <!--</div>-->
+      <!--<div class="col-12-6-3">-->
+      <!--<input-combo type="select" title="线索类别" idname="activityType" ng-model="filter.activityType" source-data="codeMaster.activityType"></input-combo>-->
+      <!--</div>-->
+    </div>
+  </form>
+  <div id="mainGrid" ui-grid="hybridObj.gridOptions" class="gridCommon gridRow10" ui-grid-selection
+       ui-grid-resize-columns ui-grid-pagination ui-grid-auto-resize>
+  </div>
+</div>

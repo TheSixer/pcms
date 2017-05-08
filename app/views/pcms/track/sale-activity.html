@@ -1,0 +1,40 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="searchBtnEvent()">查询</button>
+      <!-- <button type="button" class="btn btn-default" ng-click="export()">导出</button> -->
+      <!--<button type="button" class="btn btn-default" ng-click="toIntentionBtnEvent()">转订单</button>-->
+      <button type="button" class="btn btn-default" ng-click="editBtnEvent()">修改</button>
+      <!--<button type="button" class="btn btn-default" ng-click="toOrderBtnEvent()">转订单</button>-->
+      <button type="button" class="btn btn-default" ng-click="tagBtnEvent()">给客户打标签</button>
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="date" title="起始时间" idname="startDate" ng-model="filter.trackDateStart" err-msg="请按照指定格式输入时间。例如:2016-01-01"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="date" title="截止时间" idname="endDate" ng-model="filter.trackDateEnd" err-msg="请按照指定格式输入时间。例如:2016-01-01"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="活动类型" idname="activityType" ng-model="filter.activityType" source-data="codeMaster.activityType"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="text" title="跟进内容" idname="trackContent" ng-model="filter.trackContent"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="跟进结果" idname="trackResult" ng-model="filter.trackResult" source-data="codeMaster.trackResult"></input-combo>
+      </div>
+      <!--<div class="col-12-6-3">-->
+        <!--<input-combo type="select" title="二次进店" idname="isReturned" ng-model="filter.isReturned" source-data="codeMaster.binary"></input-combo>-->
+      <!--</div>-->
+      <div class="col-12-6-3">
+        <input-combo type="select" title="转订单" idname="isOrdered" ng-model="filter.isOrdered" source-data="codeMaster.isOrdered"></input-combo>
+      </div>
+    </div>
+  </form>
+  <div id="mainGrid" ui-grid="hybridObj.gridOptions" class="gridCommon gridRow10" ui-grid-selection
+       ui-grid-resize-columns ui-grid-pagination ui-grid-auto-resize>
+  </div>
+</div>

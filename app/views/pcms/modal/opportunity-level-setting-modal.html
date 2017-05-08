@@ -1,0 +1,20 @@
+<mb-modal-header title="机会级别编辑" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+<div class="modal-body body-sm" cg-busy="promise">
+  <form class="form-horizontal" name="form" role="form">
+    <div class="form-group">
+      <div class="col-12-11-11">
+        <input-combo type="select" title="机会级别" idname="key" ng-model="ruleData.key" source-data="codeMaster.clueLevel" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-11-11">
+        <input-combo type="text" title="来源" idname="nam" ng-model="ruleData.nam" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-11-11">
+        <input-combo type="text" title="备注" idname="remark" ng-model="ruleData.remark"></input-combo>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+  <button class="btn btn-sm btn-primary" ng-click="ok()" ng-disabled="form.$invalid">确定</button>
+</div>

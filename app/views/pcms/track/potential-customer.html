@@ -1,0 +1,46 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="addBtnEvent()">新增</button>
+      <button type="button" class="btn btn-default" ng-click="editBtnEvent()">编辑
+      </button>
+      <!--<button type="button" class="btn btn-default" ng-click="saveBtnEvent()" ng-disabled="viewMode">保存</button>-->
+      <!--<button type="button" class="btn btn-default" ng-click="deleteBtnEvent()" ng-disabled="!(hybridObj.selectedRow.entity && viewMode)">删除</button>-->
+      <!--<button type="button" class="btn btn-default" ng-click="cancelBtnEvent()" ng-disabled="viewMode">取消</button>-->
+      <button type="button" class="btn btn-default" ng-click="queryBtnEvent()">查询</button>
+      <button type="button" class="btn btn-default" ng-click="customerBtnEvent()">客户画像</button>
+      <!--<button type="button" ngf-select accept="application/vnd.ms-excel" ng-model="uploadFile" class="btn btn-default" ng-model="uploadFile" ng-disabled="!viewMode">导入</button>-->
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="text" title="姓名" idname="filter_customerName"
+                     ng-model="filter.customerName"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="证件类型" idname="filter_idType" ng-model="filter.idType"
+                     source-data="codeMaster.idType""></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="text" title="电话" idname="filter_phone" ng-model="filter.phone"
+                    ></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="区域" idname="filter_area" ng-model="filter.area"
+                     source-data="area"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="省份" idname="filter_province" ng-model="filter.province"
+                     source-data="province" ng-disabled="provinceMode"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="城市" idname="filter_city" ng-model="filter.city"
+                     source-data="city" ng-disabled="cityMode"></input-combo>
+      </div>
+    </div>
+  </form>
+  <div id="mainGrid" ui-grid="hybridObj.gridOptions" class="gridCommon gridRow10" ui-grid-selection
+       ui-grid-resize-columns ui-grid-pagination ui-grid-auto-resize>
+  </div>
+</div>

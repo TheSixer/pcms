@@ -1,0 +1,21 @@
+<label class="control-label {{labelClass? labelClass : 'col-xs-4'}}" ng-if="!noLabel" ng-class="{ 'highlight': ngRequired }" for="{{idname}}">
+   <span class="symbol" ng-class="{'required': ngRequired, 'ok': ngRequired && form.$valid}"></span>{{title}}
+</label>
+<div class="{{inputClass ? inputClass : 'col-xs-8'}}" ng-class="{ 'has-error': form.$invalid && !ngDisabled }">
+  <textarea
+    class="form-control"
+    id="{{idname}}"
+    name="{{idname}}"
+    placeholder=""
+    maxlength="{{maxlength}}"
+    ng-model="ngModel"
+    ng-disabled="ngDisabled"
+    ng-required="ngRequired"
+    ng-pattern="ngPattern"
+    ng-change="ngChange()"
+    ng-focus="ngFocus()"
+    ng-blur="ngBlur()"
+    uib-tooltip="{{errMsg}}"
+    tooltip-enable="form.$invalid"
+    tooltip-animation="false"></textarea>
+</div>

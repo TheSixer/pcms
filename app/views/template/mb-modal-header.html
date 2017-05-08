@@ -1,0 +1,8 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{title}}</h4>
+  <uib-alert class="modal-alert" dismiss-on-timeout=5000 ng-repeat="alert in alerts" type="{{alert.type}}" close="alerts.splice($index,1);">{{alert.code | translate:alert.param}}
+  </uib-alert>
+  <div class="close" ng-click="cancelClick()">
+    <i class="fa fa-times"></i>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<label class="control-label {{labelClass? labelClass : 'col-xs-4'}}" for="{{idname}}">
+   <span class="symbol" ng-class="{'required': ngRequired, 'ok': ngRequired && form.$valid}"></span>{{title}}
+</label>
+<div class="{{inputClass ? inputClass : 'col-xs-8'}} input-group">
+  <select class="form-control" id="{{idname}}" name="{{idname}}" ng-model="ngModel.value" ng-init="ngModel.value = ngModel.value || sourceData[0]" ng-options="o.value for o in sourceData track by o.id" ng-disabled="ngDisabled"></select>
+</div>

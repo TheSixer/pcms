@@ -1,0 +1,36 @@
+<div class="row sub-container" cg-busy="promise">
+  <div class="div-btn-head">
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-default" ng-click="searchBtnEvent()">查询</button>
+      <button type="button" class="btn btn-default" ng-click="exportBtnEvent()">导出</button>
+    </div>
+  </div>
+  <form class="form-horizontal" name="form">
+    <div class="form-group">
+      <div class="col-12-6-3">
+        <input-combo type="date" title="起始时间" idname="bgnTim" ng-model="filter.bgnTim" err-msg="请按照指定格式输入时间。例如:2016-01-01 12:00:00" output-format="'yyyy-MM-dd HH:mm:ss'"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="date" title="截止时间" idname="endTim" ng-model="filter.endTim" err-msg="请按照指定格式输入时间。例如:2016-01-01 12:00:00" output-format="'yyyy-MM-dd HH:mm:ss'"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="意向车型" idname="intentionModel" ng-model="filter.intentionModel" source-data="codeMaster.intentionModel"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="来源平台" idname="chanceOrigin" ng-model="filter.chanceOrigin" source-data="codeMaster.clueOrigin"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="区域" idname="area" ng-model="filter.area" source-data="codeMaster.area"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="省份" idname="province" ng-model="filter.province" source-data="codeMaster.province"></input-combo>
+      </div>
+      <div class="col-12-6-3">
+        <input-combo type="select" title="城市" idname="city" ng-model="filter.city" source-data="codeMaster.city"></input-combo>
+      </div>
+    </div>
+  </form>
+  <div id="mainGrid" ui-grid="hybridObj.gridOptions" class="gridCommon gridRow10" ui-grid-selection
+       ui-grid-resize-columns ui-grid-pagination ui-grid-auto-resize>
+  </div>
+</div>

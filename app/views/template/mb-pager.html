@@ -1,0 +1,22 @@
+<div class="div-pager" ng-show="grid.rows && grid.rows.length > 0">
+  <select ng-model="numPerPage" ng-options="page for page in pageList"></select>
+  <ul
+    uib-pagination
+    boundary-links="true"
+    total-items="totalItems"
+    num-pages="numPages"
+    items-per-page="numPerPage"
+    force-ellipses="true"
+    max-size=5
+    ng-model="currentPage"
+    ng-change="query()"
+    ng-disabled="loading"
+    class="pagination-sm"
+    previous-text="上一页"
+    next-text="下一页"
+    first-text="首页"
+    last-text="尾页"></ul>
+  <input type="number" ng-model="toPage" ng-keypress="gotoPage($event, toPage)"/>
+  <label>/{{numPages}}页</label>
+  <span>显示{{1+(currentPage-1)*numPerPage}}到{{currentPage===numPages?totalItems:currentPage*numPerPage}}，共{{totalItems}}条记录</span>
+</div>

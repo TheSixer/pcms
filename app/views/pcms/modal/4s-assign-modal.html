@@ -1,0 +1,25 @@
+<div>
+  <mb-modal-header title="机会分配(总部)" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+  <div class="modal-body body-sm" cg-busy="promise">
+    <form class="form-horizontal" name="Form" id="Form">
+      <div class="form-group">
+        <div class="col-12-11-11">
+          <input-combo type="select" title="区域" idname="area" ng-model="filter.area" source-data="area"></input-combo>
+        </div>
+        <div class="col-12-11-11">
+          <input-combo type="select" title="省份" idname="province" ng-model="filter.province" source-data="province" ng-disabled="provinceMode"></input-combo>
+        </div>
+        <div class="col-12-11-11">
+          <input-combo type="select" title="城市" idname="city" ng-model="filter.city" source-data="city" ng-disabled="cityMode"></input-combo>
+        </div>
+        <div class="col-12-11-11">
+          <input-combo type="select" title="4S店" idname="dealer" ng-model="filter.dealer" source-data="dealer" ng-disabled="dealerMode" ng-required="true"></input-combo>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+    <button class="btn btn-sm btn-primary" ng-click="ok()" ng-disabled="Form.$invalid">确定</button>
+  </div>
+</div>

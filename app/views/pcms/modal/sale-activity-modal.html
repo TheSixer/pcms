@@ -1,0 +1,42 @@
+<mb-modal-header title="销售活动{{action}}" alerts="alerts" cancel-click="cancel()"></mb-modal-header>
+<div class="modal-body body-sm" cg-busy="promise">
+  <form class="form-horizontal" name="form" role="form">
+    <div class="form-group">
+      <div class="col-12-6-6">
+        <input-combo type="text" title="活动编号" idname="activityId" ng-model="activityData.activityId" ng-disabled="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="活动类型" idname="activityType" ng-model="activityData.activityType" ng-required="true" source-data="codeMaster.activityType"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="date" title="跟进时间" idname="trackDate" ng-model="activityData.trackDate" err-msg="请按照指定格式输入时间。例如:2016-01-01" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="跟进结果" idname="trackResult" ng-model="activityData.trackResult" source-data="codeMaster.trackResult"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="date" title="来店时间" idname="comeDate" ng-model="activityData.comeDate" err-msg="请按照指定格式输入时间。例如:2016-01-01""></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="客户人数" idname="customerNum" ng-pattern="pattern.number" ng-model="activityData.customerNum" ng-required="true"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="是否二次进店" idname="isReturned"
+                     ng-model="activityData.isReturned" ng-required="true" source-data="codeMaster.isOrdered"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="select" title="转订单" idname="isOrdered" ng-model="activityData.isOrdered" source-data="codeMaster.isOrdered"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="text" title="客户意见" idname="customerComment" ng-model="activityData.customerComment"></input-combo>
+      </div>
+      <div class="col-12-6-6">
+        <input-combo type="textarea" title="跟进内容" idname="trackContent" ng-model="activityData.trackContent" ng-required="true"></input-combo>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+  <button class="btn btn-sm btn-primary" ng-click="ok()" ng-disabled="form.$invalid">确定</button>
+</div>
